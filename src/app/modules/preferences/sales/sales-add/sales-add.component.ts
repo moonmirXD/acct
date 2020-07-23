@@ -17,12 +17,14 @@ export class SalesAddComponent implements OnInit {
   ) {
     this.salesForm = this.fb.group({
       id: ['', Validators.required],
-      firstName: ['', Validators.required],
-      middleName: ['', Validators.required],
-      lastName: ['', Validators.required],
+      name: this.fb.group({
+        firstName: ['', Validators.required],
+        middleName: ['', Validators.required],
+        lastName: ['', Validators.required],
+      }),
       email: ['', Validators.email],
       address: ['', Validators.required],
-      contact: ['', Validators.required],
+      contactNo: ['', Validators.required],
     });
   }
 
@@ -32,8 +34,8 @@ export class SalesAddComponent implements OnInit {
   onSubmit(form) {
     this.apiService.postRequest('/sales', form).subscribe(res => {
       console.log(res);
-      this.onClose();
       alert('Successfully added');
+      this.onClose();
     });
   }
   onClose() {

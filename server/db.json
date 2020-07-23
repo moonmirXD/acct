@@ -10,62 +10,47 @@
     {
       "number": 3,
       "id": 1,
-      "name": "json-server",
-      "email": "asda@yaho.com",
-      "contactNo": 909094545
+      "name": {
+        "firstName": "Ryan",
+        "middleName": "Davila",
+        "lastName": "Arqueza"
+      },
+      "email": "ryan@yahoo.com",
+      "contactNo": "zzzryan@yahoo.com",
+      "address": "ryan@yahoo.com"
     },
     {
-      "number": 3,
-      "id": 1,
-      "name": "json-server",
-      "email": "asda@yaho.com",
-      "contactNo": 909094545
+      "id": "asd",
+      "name": {
+        "firstName": "Ryann",
+        "middleName": "s",
+        "lastName": "nmadz"
+      },
+      "email": "asdka@yahoo.com",
+      "address": "ainta",
+      "contactNo": "qwqw"
     },
     {
-      "number": 3,
-      "id": 1,
-      "name": "json-server",
-      "email": "asda@yaho.com",
-      "contactNo": 909094545
-    },
-    {
-      "number": 3,
-      "id": 1,
-      "name": "json-server44",
-      "email": "asda@yaho.com",
-      "contactNo": 909094545
-    },
-    {
-      "number": 3,
       "id": 2,
-      "name": "json-server333",
-      "email": "asda@yaho.com",
-      "contactNo": 909094545
+      "name": {
+        "firstName": "nice",
+        "middleName": "nicen",
+        "lastName": "nice"
+      },
+      "email": "nicen",
+      "address": "nicen",
+      "contactNo": "ice"
     },
     {
-      "number": 3,
       "id": 3,
-      "name": "json-server2",
-      "email": "asda@yaho.com",
-      "contactNo": 909094545
-    },
-    {
-      "id": "asas",
-      "firstName": "asd",
-      "middleName": "sad",
-      "lastName": "asdasdsa",
-      "email": "qwewqe",
-      "address": "wqeqweqw",
-      "contact": "easddasdsa"
-    },
-    {
-      "id": "add",
-      "firstName": "zxc",
-      "middleName": "asd",
-      "lastName": "qw",
-      "email": "easd",
-      "address": "asdas",
-      "contact": "dzxczcx"
+      "name": {
+        "firstName": "Heybey",
+        "middleName": "heyy",
+        "lastName": "Beyee"
+      },
+      "email": "aa@yahoo.com",
+      "address": "asdklaksdlo@yahoo.com",
+      "contactNo": "asdzxczcxzcx"
     }
   ],
   "sample": [

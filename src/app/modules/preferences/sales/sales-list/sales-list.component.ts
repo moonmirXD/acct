@@ -7,6 +7,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { map } from 'rxjs/operators';
 
 import { SalesAddComponent } from '../sales-add/sales-add.component';
+import { SalesEditComponent } from '../sales-edit/sales-edit.component';
+import { SalesService } from 'src/app/core/services/preferences/sales.service';
 
 @Component({
   selector: 'app-sales-list',
@@ -22,7 +24,7 @@ export class SalesListComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private dialog: MatDialog,
-
+    private salesService: SalesService
   ) { }
 
   displayedColumns: string[] = ['number', 'id', 'name', 'email', 'contactNo', 'actions'];
@@ -31,7 +33,6 @@ export class SalesListComponent implements OnInit {
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   ngOnInit(): void {
     this.viewList();
-    this.paginator._changePageSize(this.paginator.pageSize);
   }
 
 
@@ -57,10 +58,36 @@ export class SalesListComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.width = '60%';
-    this.dialog.open(SalesAddComponent);
-  }
-  private refreshTable() {
-    this.paginator._changePageSize(this.paginator.pageSize);
+    const dialogRef = this.dialog.open(SalesAddComponent);
+
+    dialogRef.afterClosed().subscribe(res => {
+      this.viewList();
+    });
   }
 
+  editSales(row) {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '60%';
+    const dialogRef = this.dialog.open(SalesEditComponent,
+      {
+        data: { row }
+      });
+
+    dialogRef.afterClosed().subscribe(res => {
+      this.viewList();
+    });
+  }
+
+  onDelete(row) {
+    if (confirm('Are you sure you want to delete this?')) {
+      this.apiService.deleteRequest('/sales', row).subscribe(res => {
+        console.log('Deleted');
+        this.viewList();
+      });
+    } else {
+      console.log('Thing was not saved to the database.');
+    }
+  }
 }

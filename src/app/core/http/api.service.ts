@@ -30,4 +30,12 @@ export class ApiService {
   public getRequest(path) {
     return this.http.get(this.REST_API_SERVER + path).pipe(retry(3), catchError(this.handleError));
   }
+
+  public deleteRequest(path, id) {
+    return this.http.delete(this.REST_API_SERVER + path + '/' + id).pipe(retry(3), catchError(this.handleError));
+  }
+
+  public updateRequest(path, id, body) {
+    return this.http.patch(this.REST_API_SERVER + path + '/' + id, body).pipe(retry(3), catchError(this.handleError));
+  }
 }

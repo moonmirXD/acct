@@ -7,7 +7,7 @@
         <label class="mt-2">You cannot change this once added.</label>
     </div>
 
-    <div class="form-row">
+    <div class="form-row" formGroupName="name">
         <div class="form-group col-md-4">
             <label>First Name*</label>
             <input type="text" class="form-control" formControlName="firstName">
@@ -36,9 +36,9 @@
 
     <div class="form-group">
         <label>Contact*</label>
-        <input type="text" class="form-control" placeholder="09xxxxxxxx" formControlName="contact">
+        <input type="text" class="form-control" placeholder="09xxxxxxxx" formControlName="contactNo">
     </div>
 
     <button type="submit" class="btn btn-primary mr-2">Add</button>
-    <button type="input" class="btn btn-primary" (click)="onCancel()">Cancel</button>
+    <button type="button" class="btn btn-primary" (click)="onClose()">Cancel</button>
 </form>
