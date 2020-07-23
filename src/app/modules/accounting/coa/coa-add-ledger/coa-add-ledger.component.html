@@ -1,0 +1,50 @@
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" (ngSubmit)="onSubmit(ledgerForm.value)" [formGroup]="ledgerForm">
+
+    <p>Ledger</p>
+
+    <!-- Group -->
+    <label>Group</label>
+    <select class="browser-default custom-select mb-4" formControlName="group">
+        <option value="" disabled>Choose option</option>
+        <option *ngFor="let group of groups" value="{{ group.value }}">{{ group.text }}</option>
+    </select>
+
+    <!-- Ledger Number -->
+    <input type="text" class="form-control mb-4" placeholder="Ledger Number*" formControlName="ledgerNumber">
+    <mat-error *ngIf="ledgerForm.controls['ledgerNumber'].errors?.required">This field is required.</mat-error>
+
+    <!-- Ledger Name -->
+    <input type="text" class="form-control mb-4" placeholder="Ledger Name*" formControlName="ledgerName">
+
+    <!-- Opening Balance -->
+
+    <label>Opening Balance</label>
+
+    <div class="row">
+
+        <div class="col-xs-6 col-sm-6 col-6">
+            <select class="browser-default custom-select mb-4" formControlName="opBalance">
+                <option value="" disabled>Choose option</option>
+                <option value="1" *ngFor="let opBalance of opBalances" value="{{ opBalance.value}}">{{opBalance.text}}
+                </option>
+            </select>
+        </div>
+        <div class="col-xs-6 col-sm-6 col-6">
+            <input type="text" class="form-control mb-4" placeholder="0.00*" formControlName="balance">
+        </div>
+    </div>
+
+
+    <!-- Description -->
+    <div class="form-group">
+        <textarea class="form-control rounded-0" rows="3" placeholder="Description*"
+            formControlName="description"></textarea>
+    </div>
+
+
+
+    <!-- Submit button -->
+    <button class="btn btn-primary" block="true" type="submit">Submit</button>
+
+</form>

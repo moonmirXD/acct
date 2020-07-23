@@ -1,0 +1,295 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "sales": [
+    {
+      "number": 3,
+      "id": 1,
+      "name": "json-server",
+      "email": "asda@yaho.com",
+      "contactNo": 909094545
+    },
+    {
+      "number": 3,
+      "id": 1,
+      "name": "json-server",
+      "email": "asda@yaho.com",
+      "contactNo": 909094545
+    },
+    {
+      "number": 3,
+      "id": 1,
+      "name": "json-server",
+      "email": "asda@yaho.com",
+      "contactNo": 909094545
+    },
+    {
+      "number": 3,
+      "id": 1,
+      "name": "json-server44",
+      "email": "asda@yaho.com",
+      "contactNo": 909094545
+    },
+    {
+      "number": 3,
+      "id": 2,
+      "name": "json-server333",
+      "email": "asda@yaho.com",
+      "contactNo": 909094545
+    },
+    {
+      "number": 3,
+      "id": 3,
+      "name": "json-server2",
+      "email": "asda@yaho.com",
+      "contactNo": 909094545
+    },
+    {
+      "id": "asas",
+      "firstName": "asd",
+      "middleName": "sad",
+      "lastName": "asdasdsa",
+      "email": "qwewqe",
+      "address": "wqeqweqw",
+      "contact": "easddasdsa"
+    },
+    {
+      "id": "add",
+      "firstName": "zxc",
+      "middleName": "asd",
+      "lastName": "qw",
+      "email": "easd",
+      "address": "asdas",
+      "contact": "dzxczcx"
+    }
+  ],
+  "sample": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "group": "group.value",
+      "ledgerNumber": "asd",
+      "ledgerName": "zxccx",
+      "opBalance": "1",
+      "balance": "",
+      "description": "zxczcx",
+      "bank": "",
+      "id": 2
+    },
+    {
+      "group": "Group1",
+      "ledgerNumber": "zxc",
+      "ledgerName": "zxc",
+      "opBalance": "1",
+      "balance": "",
+      "description": "zz",
+      "bank": "",
+      "id": 3
+    },
+    {
+      "group": "Group1",
+      "ledgerNumber": "123",
+      "ledgerName": "123123",
+      "opBalance": "Cr",
+      "balance": "",
+      "description": "zxzcxzcx",
+      "bank": "",
+      "id": 4
+    },
+    {
+      "group": "Group1",
+      "ledgerNumber": "asdasd",
+      "ledgerName": "xzczxcxcz",
+      "opBalance": "Cr",
+      "balance": "112",
+      "description": "asdwqeqwe",
+      "bank": "",
+      "id": 5
+    },
+    {
+      "group": "",
+      "ledgerNumber": "",
+      "ledgerName": "",
+      "opBalance": "",
+      "balance": "",
+      "description": "",
+      "bank": "",
+      "id": 6
+    },
+    {
+      "id": "asdasd",
+      "firstName": "sad",
+      "middleName": "asdasd",
+      "lastName": "asdasd",
+      "email": "asdd",
+      "address": "sasda",
+      "contact": "dsasdasd"
+    },
+    {
+      "id": 7,
+      "firstName": "",
+      "middleName": "",
+      "lastName": "",
+      "email": "",
+      "address": "",
+      "contact": ""
+    },
+    {
+      "id": 8,
+      "firstName": "",
+      "middleName": "",
+      "lastName": "",
+      "email": "",
+      "address": "",
+      "contact": ""
+    },
+    {
+      "id": 9,
+      "firstName": "",
+      "middleName": "",
+      "lastName": "",
+      "email": "",
+      "address": "",
+      "contact": ""
+    },
+    {
+      "id": 10,
+      "firstName": "",
+      "middleName": "",
+      "lastName": "",
+      "email": "",
+      "address": "",
+      "contact": ""
+    },
+    {
+      "id": 11,
+      "firstName": "",
+      "middleName": "",
+      "lastName": "",
+      "email": "",
+      "address": "",
+      "contact": ""
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "bank": [
+    {
+      "id": "1",
+      "bankCode": "Bdo",
+      "bankName": "BPI",
+      "glAccounts": "10001"
+    },
+    {
+      "id": "2",
+      "bankCode": "Bdo",
+      "bankName": "BPI",
+      "glAccounts": "10001"
+    },
+    {
+      "id": "3",
+      "bankCode": "Bdo",
+      "bankName": "BPI",
+      "glAccounts": "10001"
+    },
+    {
+      "id": "4",
+      "bankCode": "Bdo",
+      "bankName": "BPI",
+      "glAccounts": "10001"
+    },
+    {
+      "id": "5",
+      "bankCode": "Bdo",
+      "bankName": "BPI",
+      "glAccounts": "10001"
+    },
+    {
+      "group": "1",
+      "ledgerNumber": "asdasd",
+      "ledgerName": "asdasd",
+      "opBalance": "1",
+      "balance": "asddas",
+      "description": "zxczxc",
+      "bank": "",
+      "id": "nu3Yy8z"
+    },
+    {
+      "group": "1",
+      "ledgerNumber": "asdasd",
+      "ledgerName": "asdsda",
+      "opBalance": "1",
+      "balance": "45455",
+      "description": "123123",
+      "bank": "",
+      "id": "djs9KP3"
+    }
+  ],
+  "coa": [
+    {
+      "id": "1",
+      "type": "Typo",
+      "accountName": "Bdo",
+      "opBalance": "BPI",
+      "clBalance": "10001"
+    },
+    {
+      "id": "2",
+      "type": "Typo",
+      "accountName": "hey",
+      "opBalance": "BPI",
+      "clBalance": "3333"
+    },
+    {
+      "id": "3",
+      "type": "Typo",
+      "accountName": "yow",
+      "opBalance": "BDO",
+      "clBalance": "21212"
+    },
+    {
+      "id": "4",
+      "type": "Typo",
+      "accountName": "Bdo",
+      "opBalance": "BPI",
+      "clBalance": "10001"
+    },
+    {
+      "id": "5",
+      "type": "Typo",
+      "accountName": "Bdo",
+      "opBalance": "BPI",
+      "clBalance": "10001"
+    },
+    {
+      "id": "5",
+      "type": "Typo",
+      "accountName": "Bdo",
+      "opBalance": "BPI",
+      "clBalance": "10001"
+    },
+    {
+      "id": "5",
+      "type": "Typo",
+      "accountName": "Bdo",
+      "opBalance": "BPI",
+      "clBalance": "10001"
+    }
+  ]
+}

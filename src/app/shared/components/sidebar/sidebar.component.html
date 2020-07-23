@@ -1,0 +1,104 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            <h2>Ryan Arqueza</h2>
+            <h4>arquezaryan@gmail.com</h4>
+        </div>
+        <img src="https://vignette.wikia.nocookie.net/disneythehunchbackofnotredame/images/c/c5/Sasori1.png/revision/latest/scale-to-width-down/340?cb=20140312225740"
+            alt="Profile">
+    </div>
+
+    <mat-divider>
+    </mat-divider>
+    <h2 matSubheader>Pages</h2>
+
+    <mat-accordion>
+        <!-- <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    This is the expansion title
+                </mat-panel-title>
+                <mat-panel-description>
+                    This is a summary of the content
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <p>This is the primary content of the panel.</p>
+        </mat-expansion-panel> -->
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Accounting
+                </mat-panel-title>
+                <mat-panel-description>
+
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <li *ngFor="let panel of config.accounting">
+                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]="[  panel.path 
+                    ]">{{ panel.text }}</a>
+            </li>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Reports
+                </mat-panel-title>
+                <mat-panel-description>
+
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <li *ngFor="let panel of config.accounting">
+                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.text }}</a>
+            </li>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Preferences
+                </mat-panel-title>
+                <mat-panel-description>
+
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <li *ngFor="let panel of config.preferences">
+                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.text }}</a>
+            </li>
+        </mat-expansion-panel>
+
+
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Settings
+                </mat-panel-title>
+                <mat-panel-description>
+
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <li *ngFor="let panel of config.accounting">
+                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.text }}</a>
+            </li>
+        </mat-expansion-panel>
+    </mat-accordion>
+
+    <!-- <a mat-list-item routerLinkActive="list-item-active" routerLink='/'>Dashboard</a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink='/posts'>Posts</a> -->
+
+    <!-- <a mat-list-item [routerLink]="[ '/posts' ]" routerLinkActive="list-item-active">name</a> -->
+
+
+    <mat-divider></mat-divider>
+    <h2 matSubheader>Tools</h2>
+
+    <a mat-list-item [routerLink]="[ '/posts' ]" routerLinkActive="active">
+        <mat-icon>contacts</mat-icon>Contacts
+    </a>
+    <a mat-list-item [routerLink]="[ '/path' ]" routerLinkActive="active">
+        <mat-icon>contacts</mat-icon>Contacts
+    </a>
+
+</mat-nav-list>

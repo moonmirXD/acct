@@ -1,0 +1,33 @@
+import { Injectable } from '@angular/core';
+import { HttpErrorResponse, HttpClient } from '@angular/common/http';
+import { throwError } from 'rxjs';
+import { retry, catchError } from 'rxjs/operators';
+@Injectable({
+  providedIn: 'root'
+})
+export class ApiService {
+
+  private REST_API_SERVER = 'http://localhost:3000';
+  constructor(private http: HttpClient) { }
+
+  handleError(error: HttpErrorResponse) {
+    let errorMessage = 'Unknown error!';
+    if (error.error instanceof ErrorEvent) {
+      // Client-side errors
+      errorMessage = `Error: ${error.error.message}`;
+    } else {
+      // Server-side errors
+      errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    window.alert(errorMessage);
+    return throwError(errorMessage);
+  }
+
+  public postRequest(path, body) {
+    return this.http.post(this.REST_API_SERVER + path, body).pipe(catchError(this.handleError));
+  }
+
+  public getRequest(path) {
+    return this.http.get(this.REST_API_SERVER + path).pipe(retry(3), catchError(this.handleError));
+  }
+}

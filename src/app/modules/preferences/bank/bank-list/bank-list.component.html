@@ -1,0 +1,64 @@
+<div class="p-3 font-weight-bold">
+
+    <h2>Bank</h2>
+
+</div>
+<mat-divider></mat-divider>
+
+
+
+<div class="card mt-4">
+    <div class=" card-header">
+        Bank
+    </div>
+    <!-- <ngx-datatable class="bootstrap" [rows]="rows" [columnMode]="'flex'" [headerHeight]="50" [footerHeight]="50"
+        [rowHeight]="50" [scrollbarV]="true" [sorts]="[{prop: 'name', dir: 'desc'}]">
+
+        <ngx-datatable-column name="#" prop="id">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.id}}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Bank Code">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.bankCode}}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="Bank Name">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.bankName}}
+            </ng-template>
+        </ngx-datatable-column>
+
+        <ngx-datatable-column name="GL Accounts">
+            <ng-template let-row="row" ngx-datatable-cell-template>
+                {{row.glAccounts}}
+            </ng-template>
+        </ngx-datatable-column>
+
+    </ngx-datatable> -->
+
+
+    <table class="table mt-4">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Bank Code</th>
+                <th scope="col">Bank Name</th>
+                <th scope="col">GL Accounts</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of rows">
+                <th scope="row">{{row.id}}</th>
+                <td> {{row.bankCode}}</td>
+                <td> {{row.bankName}}</td>
+                <td>{{row.glAccounts}}</td>
+                <td>Action</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
