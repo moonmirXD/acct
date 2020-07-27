@@ -6,6 +6,18 @@
       "author": "typicode"
     }
   ],
+  "supplier": [],
+  "psupplier": [
+    {
+      "id": 1,
+      "code": "json-server",
+      "name": "typicode",
+      "address": "typicode",
+      "tinNo": "typicode",
+      "contactPerson": "typicode",
+      "number": "typicode"
+    }
+  ],
   "sales": [
     {
       "number": 3,
@@ -51,6 +63,28 @@
       "email": "aa@yahoo.com",
       "address": "asdklaksdlo@yahoo.com",
       "contactNo": "asdzxczcxzcx"
+    },
+    {
+      "id": "Boom bayah",
+      "name": {
+        "firstName": "boomyabaya",
+        "middleName": "vbayah",
+        "lastName": "bayah"
+      },
+      "email": "asdkboombayah@yahoo.com",
+      "address": "asdkboombayah@yahoo.com",
+      "contactNo": "asdkboombayah@yahoo.com"
+    },
+    {
+      "id": "5",
+      "name": {
+        "firstName": "panaginip2",
+        "middleName": "leaveszzzz",
+        "lastName": "zxc"
+      },
+      "email": "asdaasdsa@yahoo.com22",
+      "address": "510 poearl street cscasd22",
+      "contactNo": "zxczxzxc222"
     }
   ],
   "sample": [

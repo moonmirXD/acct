@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from 'src/app/core/http/api.service';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
+import { ApiService } from 'src/app/core/http/api.service';
 import { MatDialogRef } from '@angular/material/dialog';
+import { SalesAddComponent } from '../../sales/sales-add/sales-add.component';
 
 @Component({
-  selector: 'app-sales-add',
-  templateUrl: './sales-add.component.html',
-  styleUrls: ['./sales-add.component.scss']
+  selector: 'app-supplier-add',
+  templateUrl: './supplier-add.component.html',
+  styleUrls: ['./supplier-add.component.scss']
 })
-export class SalesAddComponent implements OnInit {
+export class SupplierAddComponent implements OnInit {
+
   submitted = false;
   salesForm: FormGroup;
-  name: FormGroup;
   constructor(
     private fb: FormBuilder,
     private apiService: ApiService,
@@ -36,7 +37,6 @@ export class SalesAddComponent implements OnInit {
 
   get f() { return this.salesForm.controls; }
   get g() { return (this.salesForm.get('name') as FormArray).controls; }
-  // get g() { return (this.salesForm.controls.name.controls; }
 
   onSubmit(form) {
     this.submitted = true;
@@ -55,5 +55,6 @@ export class SalesAddComponent implements OnInit {
   onClose() {
     this.dialogRef.close();
   }
+
 
 }

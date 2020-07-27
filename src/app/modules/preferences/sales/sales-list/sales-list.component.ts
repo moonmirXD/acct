@@ -35,6 +35,9 @@ export class SalesListComponent implements OnInit {
     this.viewList();
   }
 
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
 
 
   viewList() {

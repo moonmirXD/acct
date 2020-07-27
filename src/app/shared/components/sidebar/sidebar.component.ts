@@ -18,7 +18,7 @@ export class SidebarComponent implements OnInit {
     ],
     preferences: [
       { text: 'Sales Representative', path: '/preferences/sales' },
-      { text: 'Bank', path: '/preferences/bank' },
+      { text: 'Supplier', path: '/preferences/supplier' },
       { text: 'Section 3', path: 'Third section' },
     ]
   };

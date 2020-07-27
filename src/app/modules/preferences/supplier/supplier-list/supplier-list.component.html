@@ -1,0 +1,215 @@
+<div class="p-3 font-weight-bold">
+
+    <div class="row">
+        <div class="buttons">
+            <h2>Supplier</h2>
+            <button mat-raised-button color="primary" (click)="addSales()">
+                <mat-icon>add</mat-icon> Add Supplier
+            </button>
+        </div>
+    </div>
+</div>
+<mat-divider></mat-divider>
+
+
+<mat-tab-group>
+    <mat-tab label="Supplier List">
+        <div class="example-container mat-elevation-z8" matSort>
+
+
+            <div class="buttons">
+
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilterSL($event.target.value)" placeholder="Search
+    " />
+                </mat-form-field>
+
+            </div>
+            <table mat-table [dataSource]=" dataSourceSL">
+
+                <!-- ID Column -->
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <!-- Code Column -->
+                <ng-container matColumnDef="code">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+                    <td mat-cell *matCellDef="let element"> {{element.Code}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name.firstName}} {{element.name.lastName}}</td>
+                </ng-container>
+
+                <!-- Address Column -->
+                <ng-container matColumnDef="address">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+                    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                </ng-container>
+
+                <!-- Tin Number Column -->
+                <ng-container matColumnDef="tinNo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Tin Number </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tinNo}} </td>
+                </ng-container>
+
+                <!-- Contact Person Column -->
+                <ng-container matColumnDef="contactPerson">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact Person </th>
+                    <td mat-cell *matCellDef="let element"> {{element.contactPerson}} </td>
+                </ng-container>
+
+                <!-- Number Column -->
+                <ng-container matColumnDef="number">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Number </th>
+                    <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+                </ng-container>
+
+                <!-- Actions Column -->
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-icon-button (click)="onEditSupplier(element)">
+                            <mat-icon>launch</mat-icon>
+                        </button>
+                        <button class="ml-2" mat-icon-button color="warn" (click)="onDeleteSupplier(element.id)">
+                            <mat-icon>delete_outline</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <!-- Loading Data -->
+                <ng-container matColumnDef="loading">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        Loading data...
+                    </mat-footer-cell>
+                </ng-container>
+
+                <!-- No Data -->
+                <ng-container matColumnDef="noData">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        No data.
+                    </mat-footer-cell>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="supplierListColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: supplierListColumns;"></tr>
+            </table>
+
+            <div *ngIf="noData | async" class="no-records" style="text-align: center; padding: 20px;">
+                No records found
+            </div>
+
+
+            <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+                <mat-progress-spinner color="primary" mode="indeterminate">
+                </mat-progress-spinner>
+            </mat-card>
+
+            <mat-paginator [pageSizeOptions]="[20, 25, 30]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-tab>
+
+
+
+    <mat-tab label="Purchasing Supplier List"> Purchasing Supplier List
+
+        <div class="example-container mat-elevation-z8" matSort>
+
+
+            <div class="buttons">
+
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilterPSL($event.target.value)" placeholder="Search
+    " />
+                </mat-form-field>
+
+            </div>
+            <table mat-table [dataSource]=" dataSourcePSL">
+
+                <!-- ID Column -->
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name.firstName}} {{element.name.lastName}}</td>
+                </ng-container>
+
+                <!-- Address Column -->
+                <ng-container matColumnDef="address">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Address </th>
+                    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+                </ng-container>
+
+                <!-- Tin Number Column -->
+                <ng-container matColumnDef="tinNo">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Tin Number </th>
+                    <td mat-cell *matCellDef="let element"> {{element.tinNo}} </td>
+                </ng-container>
+
+                <!-- Contact Person Column -->
+                <ng-container matColumnDef="contactPerson">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact Person </th>
+                    <td mat-cell *matCellDef="let element"> {{element.contactPerson}} </td>
+                </ng-container>
+
+                <!-- Number Column -->
+                <ng-container matColumnDef="number">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Number </th>
+                    <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+                </ng-container>
+
+                <!-- Actions Column -->
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-icon-button (click)="onEditPurchasingSupplier(element)">
+                            <mat-icon>launch</mat-icon>
+                        </button>
+                        <button class="ml-2" mat-icon-button color="warn"
+                            (click)="onDeletePurchasingSupplier(element.id)">
+                            <mat-icon>delete_outline</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <!-- Loading Data -->
+                <ng-container matColumnDef="loading">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        Loading data...
+                    </mat-footer-cell>
+                </ng-container>
+
+                <!-- No Data -->
+                <ng-container matColumnDef="noData">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        No data.
+                    </mat-footer-cell>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="purchasingSupplierListColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: purchasingSupplierListColumns;"></tr>
+            </table>
+
+            <div *ngIf="noData | async" class="no-records" style="text-align: center; padding: 20px;">
+                No records found
+            </div>
+
+
+            <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+                <mat-progress-spinner color="primary" mode="indeterminate">
+                </mat-progress-spinner>
+            </mat-card>
+
+            <mat-paginator [pageSizeOptions]="[20, 25, 30]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-tab>
+</mat-tab-group>

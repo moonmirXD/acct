@@ -70,7 +70,8 @@ import { RouterModule } from '@angular/router';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+
   ],
   exports: [
     RouterModule,
