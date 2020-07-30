@@ -17,7 +17,7 @@ import { SalesService } from 'src/app/core/services/preferences/sales.service';
 })
 export class SalesListComponent implements OnInit {
   rows: any;
-  dataSource: any;
+  sales: any;
   noData: any;
   isLoading = true;
 
@@ -32,25 +32,25 @@ export class SalesListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   ngOnInit(): void {
-    this.viewList();
+    this.getSales();
   }
 
   applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+    this.sales.filter = filterValue.trim().toLowerCase();
   }
 
 
-  viewList() {
+  getSales() {
     this.apiService.getRequest('/sales').subscribe((res: any) => {
       this.rows = res;
-      this.dataSource = new MatTableDataSource(this.rows);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
+      this.sales = new MatTableDataSource(this.rows);
+      this.sales.paginator = this.paginator;
+      this.sales.sort = this.sort;
       console.log(res);
 
       this.isLoading = false;
 
-      this.noData = this.dataSource
+      this.noData = this.sales
         .connect()
         .pipe(map((data: any) => data.length === 0));
     }, error => this.isLoading = false);
@@ -64,7 +64,7 @@ export class SalesListComponent implements OnInit {
     const dialogRef = this.dialog.open(SalesAddComponent);
 
     dialogRef.afterClosed().subscribe(res => {
-      this.viewList();
+      this.getSales();
     });
   }
 
@@ -79,7 +79,7 @@ export class SalesListComponent implements OnInit {
       });
 
     dialogRef.afterClosed().subscribe(res => {
-      this.viewList();
+      this.getSales();
     });
   }
 
@@ -87,7 +87,7 @@ export class SalesListComponent implements OnInit {
     if (confirm('Are you sure you want to delete this?')) {
       this.apiService.deleteRequest('/sales', row).subscribe(res => {
         console.log('Deleted');
-        this.viewList();
+        this.getSales();
       });
     } else {
       console.log('Thing was not saved to the database.');

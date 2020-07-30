@@ -8,6 +8,8 @@ import { SupplierEditComponent } from './supplier-edit/supplier-edit.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateModule } from '@angular-material-components/datetime-picker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [SupplierListComponent, SupplierAddComponent, SupplierEditComponent],
@@ -17,6 +19,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxMatDatetimePickerModule,
+    NgxMatTimepickerModule,
+    MatNativeDateModule,
+    NgxMatNativeDateModule
+  ],
+  providers: [
+    NgxMatTimepickerModule
   ],
   entryComponents: [
     SupplierAddComponent,

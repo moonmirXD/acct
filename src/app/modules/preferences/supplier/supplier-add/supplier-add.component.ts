@@ -10,24 +10,31 @@ import { SalesAddComponent } from '../../sales/sales-add/sales-add.component';
   styleUrls: ['./supplier-add.component.scss']
 })
 export class SupplierAddComponent implements OnInit {
+  public minDate: Date = new Date('05/07/1950');
+  public maxDate: Date = new Date('05/27/2017');
+  public dateValue: Date = new Date('05/16/2017');
 
   submitted = false;
-  salesForm: FormGroup;
+  supplierForm: FormGroup;
   constructor(
     private fb: FormBuilder,
     private apiService: ApiService,
-    public dialogRef: MatDialogRef<SalesAddComponent>
+    public dialogRef: MatDialogRef<SupplierAddComponent>
   ) {
-    this.salesForm = this.fb.group({
-      id: ['', Validators.required],
-      name: this.fb.group({
-        firstName: ['', Validators.required],
-        middleName: ['', Validators.required],
-        lastName: ['', Validators.required],
-      }),
-      email: ['', [Validators.email, Validators.required]],
+    this.supplierForm = this.fb.group({
+      supplierCode: [''],
+      supplierName: ['', Validators.required],
       address: ['', Validators.required],
-      contactNo: ['', Validators.required],
+      tinNo: ['', Validators.required],
+      vatStatus: ['', Validators.required],
+      terms: ['', Validators.required],
+      bankAccount: ['', Validators.required],
+      contractDate: ['', Validators.required],
+      contactPerson: this.fb.group({
+        name: [''],
+        contactNo: [''],
+        primary: ['']
+      })
     });
   }
 
@@ -35,21 +42,22 @@ export class SupplierAddComponent implements OnInit {
 
   }
 
-  get f() { return this.salesForm.controls; }
-  get g() { return (this.salesForm.get('name') as FormArray).controls; }
+  get f() { return this.supplierForm.controls; }
+  get g() { return (this.supplierForm.get('contactPerson') as FormGroup).controls; }
 
   onSubmit(form) {
     this.submitted = true;
 
-    if (this.salesForm.invalid) {
+    if (this.supplierForm.invalid) {
       return;
     }
 
-    this.apiService.postRequest('/sales', form).subscribe(res => {
-      console.log(res);
+    this.apiService.postRequest('/supplier', form).subscribe(res => {
+      console.log(console.log('HTTP response ', res));
       alert('Successfully added');
       this.onClose();
-    });
+    }, err => console.log('HTTP Error ', err)
+    );
   }
 
   onClose() {

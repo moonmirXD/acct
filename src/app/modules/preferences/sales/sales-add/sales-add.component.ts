@@ -35,8 +35,8 @@ export class SalesAddComponent implements OnInit {
   }
 
   get f() { return this.salesForm.controls; }
-  get g() { return (this.salesForm.get('name') as FormArray).controls; }
-  // get g() { return (this.salesForm.controls.name.controls; }
+  get g() { return (this.salesForm.get('name') as FormGroup).controls; }
+  // get g() { return (this.salesForm.controls.name.controls as FormArray; }
 
   onSubmit(form) {
     this.submitted = true;

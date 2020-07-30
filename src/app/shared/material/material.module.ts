@@ -7,6 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
@@ -34,6 +35,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
+import { MatOptionModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [],
@@ -45,7 +48,6 @@ import { RouterModule } from '@angular/router';
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
-    MatDatepickerModule,
     MatFormFieldModule,
     MatRadioModule,
     MatSelectModule,
@@ -71,7 +73,9 @@ import { RouterModule } from '@angular/router';
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-
+    MatOptionModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports: [
     RouterModule,
@@ -81,7 +85,6 @@ import { RouterModule } from '@angular/router';
     MatButtonModule,
     MatInputModule,
     MatAutocompleteModule,
-    MatDatepickerModule,
     MatFormFieldModule,
     MatRadioModule,
     MatSelectModule,
@@ -106,7 +109,15 @@ import { RouterModule } from '@angular/router';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
-  ]
+    MatPaginatorModule,
+    MatOptionModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+  ],
+  providers: [
+    MatDatepickerModule,
+    MatNativeDateModule
+
+  ],
 })
 export class MaterialModule { }

@@ -36,13 +36,13 @@
                 <!-- Code Column -->
                 <ng-container matColumnDef="code">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
-                    <td mat-cell *matCellDef="let element"> {{element.Code}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.code}} </td>
                 </ng-container>
 
                 <!-- Name Column -->
                 <ng-container matColumnDef="name">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-                    <td mat-cell *matCellDef="let element"> {{element.name.firstName}} {{element.name.lastName}}</td>
+                    <td mat-cell *matCellDef="let element"> {{element.supplierName}}</td>
                 </ng-container>
 
                 <!-- Address Column -->
@@ -60,13 +60,13 @@
                 <!-- Contact Person Column -->
                 <ng-container matColumnDef="contactPerson">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact Person </th>
-                    <td mat-cell *matCellDef="let element"> {{element.contactPerson}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.contactPerson.name}} </td>
                 </ng-container>
 
                 <!-- Number Column -->
                 <ng-container matColumnDef="number">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Number </th>
-                    <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.contactPerson.contactNo}} </td>
                 </ng-container>
 
                 <!-- Actions Column -->
@@ -116,7 +116,7 @@
 
 
 
-    <mat-tab label="Purchasing Supplier List"> Purchasing Supplier List
+    <mat-tab label="Purchasing Supplier List">
 
         <div class="example-container mat-elevation-z8" matSort>
 
@@ -140,7 +140,7 @@
                 <!-- Name Column -->
                 <ng-container matColumnDef="name">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-                    <td mat-cell *matCellDef="let element"> {{element.name.firstName}} {{element.name.lastName}}</td>
+                    <td mat-cell *matCellDef="let element"> {{element.supplierName}} </td>
                 </ng-container>
 
                 <!-- Address Column -->
@@ -158,13 +158,13 @@
                 <!-- Contact Person Column -->
                 <ng-container matColumnDef="contactPerson">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Contact Person </th>
-                    <td mat-cell *matCellDef="let element"> {{element.contactPerson}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.contactPerson.name}} </td>
                 </ng-container>
 
                 <!-- Number Column -->
                 <ng-container matColumnDef="number">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Number </th>
-                    <td mat-cell *matCellDef="let element"> {{element.number}} </td>
+                    <td mat-cell *matCellDef="let element"> {{element.contactPerson.contactNo}} </td>
                 </ng-container>
 
                 <!-- Actions Column -->

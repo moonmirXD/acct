@@ -6,31 +6,46 @@
       "author": "typicode"
     }
   ],
-  "supplier": [],
+  "supplier": [
+    {
+      "supplierCode": "",
+      "supplierName": "Ryan Arqueza",
+      "address": "Cainta,Rizal",
+      "tinNo": "1555",
+      "vatStatus": "option2",
+      "terms": "cash basis",
+      "bankAccount": "555522",
+      "contractDate": "2020-07-06T16:00:00.000Z",
+      "contactPerson": {
+        "name": "Madel LIne",
+        "contactNo": "066sss",
+        "primary": "hehezxc"
+      },
+      "id": 1
+    }
+  ],
   "psupplier": [
     {
-      "id": 1,
-      "code": "json-server",
-      "name": "typicode",
-      "address": "typicode",
-      "tinNo": "typicode",
-      "contactPerson": "typicode",
-      "number": "typicode"
+      "supplierCode": "",
+      "firstName": "Ryan",
+      "lastName": "Ryan",
+      "number": "5",
+      "supplierName": "asd",
+      "address": "asdsad",
+      "tinNo": "asdasd",
+      "vatStatus": "option1",
+      "terms": "",
+      "bankAccount": "asdasddsa",
+      "contractDate": "2020-07-08T16:00:00.000Z",
+      "contactPerson": {
+        "name": "asda",
+        "contactNo": "sdasdasd",
+        "primary": ""
+      },
+      "id": 1
     }
   ],
   "sales": [
-    {
-      "number": 3,
-      "id": 1,
-      "name": {
-        "firstName": "Ryan",
-        "middleName": "Davila",
-        "lastName": "Arqueza"
-      },
-      "email": "ryan@yahoo.com",
-      "contactNo": "zzzryan@yahoo.com",
-      "address": "ryan@yahoo.com"
-    },
     {
       "id": "asd",
       "name": {
@@ -85,6 +100,17 @@
       "email": "asdaasdsa@yahoo.com22",
       "address": "510 poearl street cscasd22",
       "contactNo": "zxczxzxc222"
+    },
+    {
+      "id": "55",
+      "name": {
+        "firstName": "wish",
+        "middleName": "you ",
+        "lastName": "were"
+      },
+      "email": "here@yahoo.com",
+      "address": "asd",
+      "contactNo": "zxzzz"
     }
   ],
   "sample": [
