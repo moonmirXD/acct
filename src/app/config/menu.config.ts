@@ -12,6 +12,7 @@ export class MenuConfig {
         preferences: [
             { title: 'Sales Representative', path: '/preferences/sales' },
             { title: 'Supplier', path: '/preferences/supplier' },
+            { title: 'Customer', path: '/preferences/customer' },
             { title: 'Section 3', path: 'Third section' },
         ]
     };
