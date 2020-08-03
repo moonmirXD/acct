@@ -10,7 +10,7 @@ import { PagenotfoundComponent } from 'src/app/shared/pagenotfound/pagenotfound.
 const routes: Routes = [
   { path: 'add', component: SupplierAddComponent },
   { path: 'edit', component: SupplierEditComponent },
-  { path: 'view', component: SupplierViewComponent },
+  { path: 'view/:id', component: SupplierViewComponent },
   { path: '', component: SupplierListComponent },
   { path: '**', component: PagenotfoundComponent },
   // { path: '**', redirectTo: '', pathMatch: 'full' },

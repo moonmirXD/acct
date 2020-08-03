@@ -16,8 +16,6 @@ export class SidebarComponent implements OnInit {
   constructor(private menuConfig: MenuConfig) { }
 
   ngOnInit(): void {
-    console.log('routes:', this.menuConfig.defaults);
-
   }
 
 }

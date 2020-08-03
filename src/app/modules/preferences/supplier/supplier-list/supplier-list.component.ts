@@ -94,7 +94,7 @@ export class SupplierListComponent implements OnInit {
   }
 
   onViewSupplier(row) {
-    this.router.navigate(['preferences/supplier/view']);
+    this.router.navigate(['preferences/supplier/view', row]);
   }
 
   onEditSupplier(row) {

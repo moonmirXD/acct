@@ -1,23 +1,67 @@
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works!</p>
-<p>supplier-view works! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus omnis cupiditate totam numquam
-    ipsa placeat repudiandae accusamus praesentium, laboriosam eaque maiores id. Nemo, corrupti reprehenderit debitis
-    nesciunt hic veritatis molestias!</p>
+<div class="p-3 font-weight-bold">
+
+    <div class="row">
+        <div class="buttons">
+            <h2>View Supplier</h2>
+        </div>
+    </div>
+
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="lists">
+
+    <div class="card mt-4">
+        <div class=" card-header">
+            Supplier
+        </div>
+
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <img src="https://as.sccsystem.info/upload/supplier/supplier.jpg" class="mb-4" alt="">
+                    <p><b>Terms:</b> {{supplierDetails?.terms}}</p>
+                    <p><b>Contract Date:</b> {{supplierDetails?.contractDate}}</p>
+                </div>
+
+                <div class="col-md-4">
+                    <p><b>Supplier Code:</b> {{supplierDetails?.supplierCode}}</p>
+                    <p><b>Supplier Name: </b>{{supplierDetails?.supplierName}}</p>
+                    <p><b>Address:</b> {{supplierDetails?.address}}</p>
+                    <p><b>TIN No.:</b> {{supplierDetails?.tinNo}}</p>
+                    <p><b>VAT Status:</b> {{supplierDetails?.vatStatus}}</p>
+                    <p> <b>Bank Account No.:</b>{{supplierDetails?.bankAccount}}</p>
+                </div>
+
+                <div class="col-md-4">
+                    <p><b>Contact Person/s</b></p>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Contact Number</th>
+                                <th scope="col">Primary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ryan</td>
+                                <td>
+                                    08048
+                                </td>
+                                <td>
+                                    asdds
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <button (click)="goBack()" class="btn btn-primary mb-4" style="float:right;">Back</button>
+        </div>
+    </div>
+</div>
