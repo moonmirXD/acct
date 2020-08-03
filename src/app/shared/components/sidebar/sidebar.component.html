@@ -35,7 +35,7 @@
             </mat-expansion-panel-header>
             <li *ngFor="let panel of config.accounting">
                 <a mat-list-item routerLinkActive=" list-item-active" [routerLink]="[  panel.path 
-                    ]">{{ panel.text }}</a>
+                    ]">{{ panel.title }}</a>
             </li>
         </mat-expansion-panel>
 
@@ -50,7 +50,7 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
             <li *ngFor="let panel of config.accounting">
-                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.text }}</a>
+                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.title }}</a>
             </li>
         </mat-expansion-panel>
 
@@ -65,7 +65,7 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
             <li *ngFor="let panel of config.preferences">
-                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.text }}</a>
+                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.title }}</a>
             </li>
         </mat-expansion-panel>
 
@@ -80,7 +80,7 @@
                 </mat-panel-description>
             </mat-expansion-panel-header>
             <li *ngFor="let panel of config.accounting">
-                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.text }}</a>
+                <a mat-list-item routerLinkActive=" list-item-active" [routerLink]=" panel.path">{{ panel.title }}</a>
             </li>
         </mat-expansion-panel>
     </mat-accordion>

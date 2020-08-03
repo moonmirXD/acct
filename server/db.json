@@ -9,19 +9,35 @@
   "supplier": [
     {
       "supplierCode": "",
-      "supplierName": "Ryan Arqueza",
-      "address": "Cainta,Rizal",
-      "tinNo": "1555",
-      "vatStatus": "option2",
-      "terms": "cash basis",
+      "supplierName": "Ryan Dela Cruz2",
+      "address": "Cainta,City",
+      "tinNo": "2222",
+      "vatStatus": "option1",
+      "terms": "12 days",
       "bankAccount": "555522",
-      "contractDate": "2020-07-06T16:00:00.000Z",
+      "contractDate": "2020-07-02T16:00:00.000Z",
       "contactPerson": {
-        "name": "Madel LIne",
+        "name": "Rhehe",
         "contactNo": "066sss",
         "primary": "hehezxc"
       },
       "id": 1
+    },
+    {
+      "supplierCode": "",
+      "supplierName": "Mumay",
+      "address": "Quezon City",
+      "tinNo": "12",
+      "vatStatus": "option2",
+      "terms": "13 days",
+      "bankAccount": "55522-22-2-2",
+      "contractDate": "2016-07-05T16:00:00.000Z",
+      "contactPerson": {
+        "name": "Madel",
+        "contactNo": "090",
+        "primary": "hehezxc"
+      },
+      "id": 2
     }
   ],
   "psupplier": [

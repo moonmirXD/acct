@@ -1,1 +1,147 @@
-<p>supplier-edit works!</p>
+<p>Add Supplier</p>
+<mat-divider></mat-divider>
+<form [formGroup]="supplierForm" (ngSubmit)="onSubmit(supplierForm.value)" class="mt-2">
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Supplier Code*</label>
+            <input type="text" class="form-control" formControlName="supplierCode" disabled>
+        </div>
+
+        <div class="form-group col-md-4">
+            <div class="form-group">
+                <label>Supplier Name*</label>
+                <input type="text" class="form-control" formControlName="supplierName"
+                    [ngClass]="{ 'is-invalid': submitted && f.supplierName?.errors }">
+                <div *ngIf="submitted && f.supplierName?.errors" class="invalid-feedback">
+                    <div *ngIf="f.supplierName?.errors.required">Supplier Name is required</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group col-md-4">
+            <label> Address*</label>
+            <input type="text" class="form-control" formControlName="address"
+                [ngClass]="{ 'is-invalid': submitted && f.address?.errors }">
+            <div *ngIf="submitted && f.address?.errors" class="invalid-feedback">
+                <div *ngIf="f.address?.errors?.required">Address is required</div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-4">
+            <label>Tin Number*</label>
+            <input type="text" class="form-control" formControlName="tinNo"
+                [ngClass]="{ 'is-invalid': submitted && f.tinNo?.errors }">
+            <div *ngIf="submitted && f.tinNo?.errors" class="invalid-feedback">
+                <div *ngIf="f.tinNo?.errors.required">Tin Number is required</div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label class="d-block">Vat Status*</label>
+            <div class="mt-3">
+                <div class="form-check form-check-inline mr-3">
+                    <input class="form-check-input" type="radio" value="option1" formControlName="vatStatus"
+                        [ngClass]="{ 'is-invalid': submitted && f.vatStatus?.errors }">
+                    <label class="form-check-label">VAT</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" value="option2" formControlName="vatStatus"
+                        [ngClass]="{ 'is-invalid': submitted && f.vatStatus?.errors }">
+                    <label class="form-check-label">Non-VAT</label>
+                </div>
+                <div *ngIf="submitted && f.vatStatus?.errors" class="invalid-feedback mt-2 d-block">
+                    <div *ngIf="f.vatStatus?.errors.required">Vat Status is required</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Terms*</label>
+            <select class="form-control" formControlName="terms"
+                [ngClass]="{ 'is-invalid': submitted && f.terms?.errors }">
+                <option selected>Choose...</option>
+                <option value="cash basis">Cash basis</option>
+                <option value="12 days">12 Days</option>
+                <option value="13 days">13 Days</option>
+            </select>
+            <div *ngIf="submitted && f.terms?.errors" class="invalid-feedback">
+                <div *ngIf="f.terms?.errors.required">Terms is required</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <label>Bank Account Number*</label>
+        <input type="text" class="form-control" placeholder="" formControlName="bankAccount"
+            [ngClass]="{ 'is-invalid': submitted && f.bankAccount?.errors }">
+        <div *ngIf="submitted && f.bankAccount?.errors" class="invalid-feedback">
+            <div *ngIf="f.bankAccount?.errors.required">
+                Bank Account Number is required
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <mat-label>Choose a date. Click me!*</mat-label>
+
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <input matInput [matDatepicker]="picker" class="form-control" formControlName="contractDate"
+            [ngClass]="{ 'is-invalid': submitted && f.contractDate?.errors }">
+        <div *ngIf="submitted && f.contractDate?.errors" class="invalid-feedback">
+            <div *ngIf="f.contractDate?.errors.required">
+                Date is required
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th scope="col">Name</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Primary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr formGroupName="contactPerson">
+                <th scope="row">1</th>
+                <td>
+                    <div class="form-group d-inline-block">
+                        <input type="text" class="form-control" formControlName="name"
+                            [ngClass]="{ 'is-invalid': submitted && g.name?.errors }">
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group d-inline-block">
+                        <input type="text" class="form-control" formControlName="contactNo"
+                            [ngClass]="{ 'is-invalid': submitted && g.contactNo?.errors }">
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group d-inline-block">
+                        <select class="custom-select" required formControlName="primary">
+                            <option selected disabled value="">Choose...</option>
+                            <option value="hehezxc">...</option>
+                        </select>
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+    <button type="submit" class="btn btn-primary mr-2">Update</button>
+    <button type="button" class="btn btn-primary" (click)="onClose()">Cancel</button>
+</form>

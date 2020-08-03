@@ -5,11 +5,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MaterialModule } from './material/material.module';
 import { TableComponent } from './components/table/table.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
 @NgModule({
-  declarations: [FooterComponent, HeaderComponent, SidebarComponent, TableComponent],
+  declarations: [FooterComponent, HeaderComponent, SidebarComponent, TableComponent, PagenotfoundComponent],
   imports: [
     CommonModule,
     MaterialModule

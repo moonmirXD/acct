@@ -9,6 +9,8 @@ import { map } from 'rxjs/operators';
 import { SupplierAddComponent } from '../supplier-add/supplier-add.component';
 import { SupplierEditComponent } from '../supplier-edit/supplier-edit.component';
 
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 @Component({
   selector: 'app-supplier-list',
   templateUrl: './supplier-list.component.html',
@@ -25,6 +27,7 @@ export class SupplierListComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private dialog: MatDialog,
+    private router: Router
   ) { }
 
   supplierListColumns: string[] = ['id', 'code', 'name', 'address', 'tinNo', 'contactPerson', 'number', 'actions'];
@@ -34,8 +37,8 @@ export class SupplierListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   ngOnInit(): void {
-    this.getSupplierList();
-    this.getPurchasingSupplierList();
+    this.getSuppliers();
+    this.getPurchasingSuppliers();
   }
 
   applyFilterSL(filterValue: string) {
@@ -46,7 +49,7 @@ export class SupplierListComponent implements OnInit {
   }
 
 
-  getSupplierList() {
+  getSuppliers() {
     this.apiService.getRequest('/supplier').subscribe((res: any) => {
       this.supplierList = res;
       this.dataSourceSL = new MatTableDataSource(this.supplierList);
@@ -62,7 +65,7 @@ export class SupplierListComponent implements OnInit {
     }, error => this.isLoading = false);
   }
 
-  getPurchasingSupplierList() {
+  getPurchasingSuppliers() {
     this.apiService.getRequest('/psupplier').subscribe((res: any) => {
       this.purchasingSupplierList = res;
       this.dataSourcePSL = new MatTableDataSource(this.purchasingSupplierList);
@@ -78,7 +81,7 @@ export class SupplierListComponent implements OnInit {
     }, error => this.isLoading = false);
   }
 
-  addSales() {
+  addSupplier() {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
@@ -86,8 +89,12 @@ export class SupplierListComponent implements OnInit {
     const dialogRef = this.dialog.open(SupplierAddComponent);
 
     dialogRef.afterClosed().subscribe(res => {
-      this.getSupplierList();
+      this.getSuppliers();
     });
+  }
+
+  onViewSupplier(row) {
+    this.router.navigate(['preferences/supplier/view']);
   }
 
   onEditSupplier(row) {
@@ -101,7 +108,7 @@ export class SupplierListComponent implements OnInit {
       });
 
     dialogRef.afterClosed().subscribe(res => {
-      this.getSupplierList();
+      this.getSuppliers();
     });
   }
 
@@ -116,7 +123,7 @@ export class SupplierListComponent implements OnInit {
       });
 
     dialogRef.afterClosed().subscribe(res => {
-      this.getSupplierList();
+      this.getSuppliers();
     });
   }
 
@@ -124,7 +131,7 @@ export class SupplierListComponent implements OnInit {
     if (confirm('Are you sure you want to delete this?')) {
       this.apiService.deleteRequest('/supplier', row).subscribe(res => {
         console.log('Deleted');
-        this.getSupplierList();
+        this.getSuppliers();
       });
     } else {
       console.log('Thing was not saved to the database.');
@@ -135,7 +142,7 @@ export class SupplierListComponent implements OnInit {
     if (confirm('Are you sure you want to delete this?')) {
       this.apiService.deleteRequest('/psupplier', row).subscribe(res => {
         console.log('Deleted');
-        this.getPurchasingSupplierList();
+        this.getPurchasingSuppliers();
       });
     } else {
       console.log('Thing was not saved to the database.');

@@ -10,9 +10,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateModule } from '@angular-material-components/datetime-picker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { SupplierViewComponent } from './supplier-view/supplier-view.component';
 
 @NgModule({
-  declarations: [SupplierListComponent, SupplierAddComponent, SupplierEditComponent],
+  declarations: [SupplierListComponent, SupplierAddComponent, SupplierEditComponent, SupplierViewComponent],
   imports: [
     CommonModule,
     SupplierRoutingModule,

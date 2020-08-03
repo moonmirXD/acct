@@ -36,14 +36,9 @@ export class SalesEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.getData();
+
   }
-  // getData() {
-  //   this.apiService.getRequest('/sales').subscribe(res => {
-  //     console.log(res);
-  //     this.formData = res;
-  //   });
-  // }
+
 
   onSubmit(form) {
     const id = this.data.row.id;
