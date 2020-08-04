@@ -56,20 +56,20 @@
       "salesRepresentative": "555522"
     },
     {
-      "supplierCode": "",
-      "supplierName": "Mumay",
-      "address": "Quezon City",
-      "tinNo": "12",
-      "vatStatus": "option2",
-      "terms": "13 days",
-      "bankAccount": "55522-22-2-2",
-      "contractDate": "2016-07-05T16:00:00.000Z",
+      "customerCode": "555",
+      "customerName": "ryan 5",
+      "address": "510",
+      "salesRepresentative": "12 days",
+      "terms": "12 days",
+      "tinNo": "2222",
+      "contractDate": "2020-08-16T16:00:00.000Z",
+      "beginningBalance": "",
       "contactPerson": {
-        "name": "Madel",
-        "contactNo": "090",
+        "name": "ryan",
+        "contactNo": "14555",
         "primary": "hehezxc"
       },
-      "id": 2
+      "id": 222223
     }
   ],
   "psupplier": [

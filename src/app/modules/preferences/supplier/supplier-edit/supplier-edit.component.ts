@@ -40,6 +40,8 @@ export class SupplierEditComponent implements OnInit {
 
   }
 
+  get f() { return this.supplierForm.controls; }
+  get g() { return (this.supplierForm.get('contactPerson') as FormGroup).controls; }
 
   onSubmit(form) {
     const id = this.data.row.id;
