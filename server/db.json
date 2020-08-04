@@ -31,9 +31,16 @@
       "customerName": "Ryan Dela Cruz2",
       "tinNo": "Cainta,City",
       "terms": "2222",
-      "contactPerson": "option1",
+      "contactPerson": {
+        "name": null,
+        "contactNo": null,
+        "primary": null
+      },
       "contactNumber": "12 days",
-      "salesRepresentative": "555522"
+      "salesRepresentative": "555522",
+      "address": null,
+      "contractDate": null,
+      "beginningBalance": null
     },
     {
       "id": 22222,
