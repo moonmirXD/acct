@@ -70,11 +70,11 @@
       "terms": "12 days",
       "tinNo": "2222",
       "contractDate": "2020-08-16T16:00:00.000Z",
-      "beginningBalance": "",
+      "beginningBalance": "555555555",
       "contactPerson": {
         "name": "ryan",
         "contactNo": "14555",
-        "primary": "hehezxc"
+        "primary": "primary"
       },
       "id": 222223
     },
