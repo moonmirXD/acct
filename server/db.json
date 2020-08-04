@@ -9,8 +9,8 @@
   "supplier": [
     {
       "supplierCode": "",
-      "supplierName": "Ryan Dela Cruz2",
-      "address": "Cainta,City",
+      "supplierName": "Ryan Dela Cruz2qq",
+      "address": "Cainta,Cityqq",
       "tinNo": "2222",
       "vatStatus": "option1",
       "terms": "12 days",
@@ -22,6 +22,22 @@
         "primary": "hehezxc"
       },
       "id": 1
+    },
+    {
+      "supplierCode": "",
+      "supplierName": "q",
+      "address": "qq",
+      "tinNo": "qq",
+      "vatStatus": "option1",
+      "terms": "cash basis",
+      "bankAccount": "qqq",
+      "contractDate": "2020-08-01T16:00:00.000Z",
+      "contactPerson": {
+        "name": "q",
+        "contactNo": "q",
+        "primary": "primary"
+      },
+      "id": 2
     }
   ],
   "customer": [

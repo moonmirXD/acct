@@ -11,16 +11,18 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 export class SupplierEditComponent implements OnInit {
   supplierForm: FormGroup;
   row: any;
+  submitted = false;
 
   constructor(
     private fb: FormBuilder,
     private apiService: ApiService,
     @Inject(MAT_DIALOG_DATA) public data: any,
+
     public dialogRef: MatDialogRef<SupplierEditComponent>
   ) {
 
     this.supplierForm = this.fb.group({
-      supplierCode: [this.data.row.supplierCode, Validators.required],
+      supplierCode: [this.data.row.supplierCode],
       supplierName: [this.data.row.supplierName, Validators.required],
       address: [this.data.row.address, Validators.required],
       tinNo: [this.data.row.tinNo, Validators.required],
@@ -44,6 +46,12 @@ export class SupplierEditComponent implements OnInit {
   get g() { return (this.supplierForm.get('contactPerson') as FormGroup).controls; }
 
   onSubmit(form) {
+    this.submitted = true;
+
+    if (this.supplierForm.invalid) {
+      return;
+    }
+
     const id = this.data.row.id;
     this.apiService.updateRequest('/supplier', id, form).subscribe(res => {
       console.log('HTTP response ', res);
