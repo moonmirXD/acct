@@ -77,6 +77,54 @@
         "primary": "hehezxc"
       },
       "id": 222223
+    },
+    {
+      "customerCode": "qweq",
+      "customerName": "weqwe",
+      "address": "qweqwe",
+      "salesRepresentative": "12 days",
+      "terms": "cash basis",
+      "tinNo": "asdads",
+      "contractDate": "2020-08-11T16:00:00.000Z",
+      "beginningBalance": "asdasd",
+      "contactPerson": {
+        "name": "qwe",
+        "contactNo": "qwewqeewq",
+        "primary": "otherContact"
+      },
+      "id": 222224
+    },
+    {
+      "customerCode": "qweq",
+      "customerName": "weqwe",
+      "address": "qweqwe",
+      "salesRepresentative": "12 days",
+      "terms": "cash basis",
+      "tinNo": "asdads",
+      "contractDate": "2020-08-11T16:00:00.000Z",
+      "beginningBalance": "500",
+      "contactPerson": {
+        "name": "Qert",
+        "contactNo": "Afaaaa",
+        "primary": "primary"
+      },
+      "id": 222225
+    },
+    {
+      "customerCode": "123",
+      "customerName": "Ryan Arqueza",
+      "address": "Cainta, Rizal",
+      "salesRepresentative": "cash basis",
+      "terms": "12 days",
+      "tinNo": "5555",
+      "contractDate": "2020-08-07T16:00:00.000Z",
+      "beginningBalance": "1250",
+      "contactPerson": {
+        "name": "Madel Line Dela Cruz",
+        "contactNo": "09055585579",
+        "primary": "primary"
+      },
+      "id": 222229
     }
   ],
   "psupplier": [
