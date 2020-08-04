@@ -3,7 +3,6 @@ import { CustomerAddComponent } from '../customer-add/customer-add.component';
 import { CustomerEditComponent } from '../customer-edit/customer-edit.component';
 import { ApiService } from 'src/app/core/http/api.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { SalesService } from 'src/app/core/services/preferences/sales.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -15,16 +14,14 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./customer-list.component.scss']
 })
 export class CustomerListComponent implements OnInit {
-
+  customers: any;
   rows: any;
-  sales: any;
   noData: any;
   isLoading = true;
 
   constructor(
     private apiService: ApiService,
     private dialog: MatDialog,
-    private salesService: SalesService
   ) { }
 
   displayedColumns: string[] = ['number', 'id', 'name', 'email', 'contactNo', 'actions'];
@@ -36,21 +33,21 @@ export class CustomerListComponent implements OnInit {
   }
 
   applyFilter(filterValue: string) {
-    this.sales.filter = filterValue.trim().toLowerCase();
+    this.customers.filter = filterValue.trim().toLowerCase();
   }
 
 
   getCustomers() {
-    this.apiService.getRequest('/sales').subscribe((res: any) => {
+    this.apiService.getRequest('/customer').subscribe((res: any) => {
       this.rows = res;
-      this.sales = new MatTableDataSource(this.rows);
-      this.sales.paginator = this.paginator;
-      this.sales.sort = this.sort;
+      this.customers = new MatTableDataSource(this.rows);
+      this.customers.paginator = this.paginator;
+      this.customers.sort = this.sort;
       console.log(res);
 
       this.isLoading = false;
 
-      this.noData = this.sales
+      this.noData = this.customers
         .connect()
         .pipe(map((data: any) => data.length === 0));
     }, error => this.isLoading = false);
@@ -85,7 +82,7 @@ export class CustomerListComponent implements OnInit {
 
   onDelete(row) {
     if (confirm('Are you sure you want to delete this?')) {
-      this.apiService.deleteRequest('/sales', row).subscribe(res => {
+      this.apiService.deleteRequest('/customer', row).subscribe(res => {
         console.log('Deleted');
         this.getCustomers();
       });
