@@ -24,7 +24,7 @@ export class CustomerListComponent implements OnInit {
     private dialog: MatDialog,
   ) { }
 
-  displayedColumns: string[] = ['number', 'id', 'name', 'email', 'contactNo', 'actions'];
+  displayedColumns: string[] = ['id', 'CustomerCode', 'customerName', 'tinNumber', 'terms', 'contactPerson', 'contactNumber', 'salesRepresentative', 'actions'];
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
