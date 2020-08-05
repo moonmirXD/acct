@@ -1,1 +1,72 @@
-<p>customer-view works!</p>
+<div class="p-3 font-weight-bold">
+
+    <div class="row">
+        <div class="buttons">
+            <h2>View Customer</h2>
+        </div>
+    </div>
+
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="lists">
+
+    <div class="card mt-4">
+        <div class=" card-header">
+            Customer
+        </div>
+
+
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <img src="https://as.sccsystem.info/upload/supplier/supplier.jpg" class="mb-4" alt="">
+
+                </div>
+
+                <div class="col-md-4">
+                    <p><b>Customer Code:</b> {{details?.customerCode}}</p>
+                    <p><b>Customer Name: </b>{{details?.customerName}}</p>
+                    <p><b>Address:</b> {{details?.address}}</p>
+                    <p><b>Sales Representative:</b> {{details?.salesRepresentative}}</p>
+                    <p><b>Terms:</b> {{details?.terms}}</p>
+                    <p><b>TIN No.:</b> {{details?.tinNumber}}</p>
+                    <p><b>Contract Date:</b> {{details?.contractDate}}</p>
+                    <p><b>Beginning Balance:</b> <span
+                            *ngIf="details?.beginningBalance">₱</span>{{details?.beginningBalance}}</p>
+
+                </div>
+
+                <div class="col-md-4">
+                    <p><b>Contact Person/s</b></p>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Contact Number</th>
+                                <th scope="col">Primary</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    {{details?.contactPerson.name}}
+                                </td>
+                                <td>
+                                    {{details?.contactPerson.contactNumber}}
+                                </td>
+                                <td>
+                                    {{details?.contactPerson.primary}}
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <button (click)="goBack()" class="btn btn-primary mb-4" style="float:right;">Back</button>
+        </div>
+    </div>
+</div>

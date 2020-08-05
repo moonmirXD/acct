@@ -220,6 +220,22 @@
         "primary": "otherContact"
       },
       "id": 222236
+    },
+    {
+      "customerCode": "q111",
+      "customerName": "qqq",
+      "address": "qq",
+      "salesRepresentative": "cash basis",
+      "terms": "cash basis",
+      "tinNumber": "q",
+      "contractDate": "2020-08-24T16:00:00.000Z",
+      "beginningBalance": "qqqq",
+      "contactPerson": {
+        "name": "q",
+        "contactNumber": "q",
+        "primary": "primary"
+      },
+      "id": 222237
     }
   ],
   "psupplier": [

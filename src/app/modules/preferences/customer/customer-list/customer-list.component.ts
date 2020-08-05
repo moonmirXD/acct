@@ -7,6 +7,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { map } from 'rxjs/operators';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer-list',
@@ -22,6 +23,7 @@ export class CustomerListComponent implements OnInit {
   constructor(
     private apiService: ApiService,
     private dialog: MatDialog,
+    private router: Router
   ) { }
 
   displayedColumns: string[] = ['id', 'customerCode', 'customerName', 'tinNumber', 'terms', 'contactPerson', 'contactNumber', 'salesRepresentative', 'actions'];
@@ -51,6 +53,10 @@ export class CustomerListComponent implements OnInit {
         .connect()
         .pipe(map((data: any) => data.length === 0));
     }, error => this.isLoading = false);
+  }
+
+  onView(row) {
+    this.router.navigate(['preferences/customer/view', row]);
   }
 
   onAdd() {
