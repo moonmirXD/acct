@@ -42,26 +42,6 @@
   ],
   "customer": [
     {
-      "id": 22222,
-      "customerCode": "zzz",
-      "customerName": "Ryan Dela Cruz2",
-      "tinNo": "Cainta,City",
-      "terms": "2222",
-      "contactPerson": "option1",
-      "contactNumber": "12 days",
-      "salesRepresentative": "555522"
-    },
-    {
-      "id": 222222,
-      "customerCode": "zzz",
-      "customerName": "Ryan Dela Cruz2",
-      "tinNo": "Cainta,City",
-      "terms": "2222",
-      "contactPerson": "option1",
-      "contactNumber": "12 days",
-      "salesRepresentative": "555522"
-    },
-    {
       "customerCode": "555",
       "customerName": "ryan 5",
       "address": "510",

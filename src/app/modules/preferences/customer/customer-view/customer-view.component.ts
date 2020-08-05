@@ -19,6 +19,8 @@ export class CustomerViewComponent implements OnInit, OnDestroy {
     this.routeSub = this.route.params.subscribe((params: Params): void => {
       this.apiService.getRequestById('/customer', params.id).subscribe(res => {
         this.details = res;
+      }, err => {
+        console.log('HTTP error ', err);
       });
     });
 
