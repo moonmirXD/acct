@@ -4,7 +4,7 @@
         <div class="buttons">
             <h2>Customers</h2>
             <button mat-raised-button color="primary" (click)="onAdd()">
-                <mat-icon>add</mat-icon> Add Sales
+                <mat-icon>add</mat-icon> Add Customer
             </button>
         </div>
     </div>
@@ -82,7 +82,7 @@
                 <ng-container matColumnDef="actions">
                     <th mat-header-cell *matHeaderCellDef> Actions </th>
                     <td mat-cell *matCellDef="let element">
-                        <button mat-icon-button class="ml-2 primary" (click)="onView(element.id)">
+                        <button mat-icon-button class="ml-2" color="primary" (click)="onView(element.id)">
                             <mat-icon>pageview</mat-icon>
                         </button>
                         <button mat-icon-button class="ml-2" (click)="onEdit(element.id)">

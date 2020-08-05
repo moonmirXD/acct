@@ -1,1 +1,148 @@
-<p>customer-add works!</p>
+<p>Add Customer</p>
+<mat-divider></mat-divider>
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit(customerForm.value)" class="mt-2">
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Customer Code*</label>
+            <input type="text" class="form-control" formControlName="customerCode">
+            <label for="" class="mt-2">
+                You cannot change this once added.</label>
+        </div>
+
+        <div class="form-group col-md-6">
+            <div class="form-group">
+                <label>Customer Name*</label>
+                <input type="text" class="form-control" formControlName="customerName"
+                    [ngClass]="{ 'is-invalid': submitted && f.customerName?.errors }">
+                <div *ngIf="submitted && f.customerName?.errors" class="invalid-feedback">
+                    <div *ngIf="f.customerName?.errors.required">Customer Name is required</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="form-group">
+        <label> Address*</label>
+        <input type="text" class="form-control" formControlName="address"
+            [ngClass]="{ 'is-invalid': submitted && f.address?.errors }">
+        <div *ngIf="submitted && f.address?.errors" class="invalid-feedback">
+            <div *ngIf="f.address?.errors?.required">Address is required</div>
+        </div>
+    </div>
+
+    <div class="form-row">
+
+
+
+        <div class="form-group col-md-4">
+            <label>Sales Representative</label>
+            <select class="form-control" formControlName="salesRepresentative"
+                [ngClass]="{ 'is-invalid': submitted && f.salesRepresentative?.errors }">
+                <option selected>Choose...</option>
+                <option value="cash basis">Cash basis</option>
+                <option value="12 days">12 Days</option>
+                <option value="13 days">13 Days</option>
+            </select>
+            <div *ngIf="submitted && f.salesRepresentative?.errors" class="invalid-feedback">
+                <div *ngIf="f.salesRepresentative?.errors.required">Sales Representative is required</div>
+            </div>
+        </div>
+
+        <div class="form-group col-md-4">
+            <label>Tin Number*</label>
+            <input type="text" class="form-control" formControlName="tinNumber"
+                [ngClass]="{ 'is-invalid': submitted && f.tinNo?.errors }">
+            <div *ngIf="submitted && f.tinNo?.errors" class="invalid-feedback">
+                <div *ngIf="f.tinNo?.errors.required">Tin Number is required</div>
+            </div>
+        </div>
+
+
+        <div class="form-group col-md-4">
+            <label>Terms*</label>
+            <select class="form-control" formControlName="terms"
+                [ngClass]="{ 'is-invalid': submitted && f.terms?.errors }">
+                <option selected>Choose...</option>
+                <option value="cash basis">Cash basis</option>
+                <option value="12 days">12 Days</option>
+                <option value="13 days">13 Days</option>
+            </select>
+            <div *ngIf="submitted && f.terms?.errors" class="invalid-feedback">
+                <div *ngIf="f.terms?.errors.required">Terms is required</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <mat-label>Choose a date. Click me!</mat-label>
+
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <input matInput [matDatepicker]="picker" class="form-control" formControlName="contractDate"
+            [ngClass]="{ 'is-invalid': submitted && f.contractDate?.errors }">
+        <div *ngIf="submitted && f.contractDate?.errors" class="invalid-feedback">
+            <div *ngIf="f.contractDate?.errors.required">
+                Date is required
+            </div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Beggining Balance</label>
+        <input type="text" class="form-control" placeholder="" formControlName="beginningBalance"
+            [ngClass]="{ 'is-invalid': submitted && f.beginningBalance?.errors }">
+        <div *ngIf="submitted && f.beginningBalance?.errors" class="invalid-feedback">
+            <div *ngIf="f.beginningBalance?.errors.required">
+                Beggining Balance is required
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                <th scope="col">Name</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Primary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr formGroupName="contactPerson">
+                <th scope="row">1</th>
+                <td>
+                    <div class="form-group d-inline-block">
+                        <input type="text" class="form-control" formControlName="name"
+                            [ngClass]="{ 'is-invalid': submitted && g.name?.errors }">
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group d-inline-block">
+                        <input type="text" class="form-control" formControlName="contactNo"
+                            [ngClass]="{ 'is-invalid': submitted && g.contactNo?.errors }">
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group d-inline-block">
+                        <select class="custom-select" required formControlName="primary">
+                            <option selected disabled value="">Choose...</option>
+                            <option value="primary">Primary</option>
+                            <option value="otherContact">Other Contact</option>
+                        </select>
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+
+
+    <button type="submit" class="btn btn-primary mr-2">Add</button>
+    <button type="button" class="btn btn-primary" (click)="onClose()">Cancel</button>
+</form>
