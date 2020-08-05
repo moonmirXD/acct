@@ -141,6 +141,118 @@
         "primary": "primary"
       },
       "id": 222229
+    },
+    {
+      "customerCode": "355",
+      "customerName": "Ryan Arqueza",
+      "address": "Cainta, Rizal 510 pearl street.",
+      "salesRepresentative": "cash basis",
+      "terms": "cash basis",
+      "tinNumber": "888",
+      "contractDate": "2020-08-24T16:00:00.000Z",
+      "beginningBalance": "",
+      "contactPerson": {
+        "name": "Madel Line dela cruz",
+        "contactNo": "09778056069",
+        "primary": "primary"
+      },
+      "id": 222230
+    },
+    {
+      "customerCode": "555",
+      "customerName": "Madel Line Dela Cruz",
+      "address": "QC QUEZON CITY!!!!!!",
+      "salesRepresentative": "cash basis",
+      "terms": "13 days",
+      "tinNumber": "888",
+      "contractDate": "2020-08-25T16:00:00.000Z",
+      "beginningBalance": "0.00",
+      "contactPerson": {
+        "name": "qqqq",
+        "contactNumber": "123",
+        "primary": "primary"
+      },
+      "id": 222231
+    },
+    {
+      "customerCode": "qqq",
+      "customerName": "q",
+      "address": "q",
+      "salesRepresentative": "13 days",
+      "terms": "cash basis",
+      "tinNumber": "q",
+      "contractDate": "",
+      "beginningBalance": "1",
+      "contactPerson": {
+        "name": "q",
+        "contactNumber": "111",
+        "primary": "primary"
+      },
+      "id": 222232
+    },
+    {
+      "customerCode": "qqq",
+      "customerName": "q",
+      "address": "q",
+      "salesRepresentative": "13 days",
+      "terms": "cash basis",
+      "tinNumber": "q",
+      "contractDate": "",
+      "beginningBalance": "1",
+      "contactPerson": {
+        "name": "q",
+        "contactNumber": "111",
+        "primary": "primary"
+      },
+      "id": 222233
+    },
+    {
+      "customerCode": "q222qweqwe",
+      "customerName": "q",
+      "address": "q",
+      "salesRepresentative": "Choose...",
+      "terms": "cash basis",
+      "tinNumber": "q",
+      "contractDate": "2020-07-15T16:00:00.000Z",
+      "beginningBalance": "",
+      "contactPerson": {
+        "name": "q",
+        "contactNumber": "q",
+        "primary": "primary"
+      },
+      "id": 222234
+    },
+    {
+      "customerCode": "qqzzz",
+      "customerName": "qqq",
+      "address": "qq",
+      "salesRepresentative": "",
+      "terms": "12 days",
+      "tinNumber": "q",
+      "contractDate": "",
+      "beginningBalance": "",
+      "contactPerson": {
+        "name": "qwe",
+        "contactNumber": "wqe",
+        "primary": "primary"
+      },
+      "id": 222235
+    },
+    {
+      "customerCode": "qqzzz",
+      "customerName": "qqq",
+      "address": "qq",
+      "salesRepresentative": "",
+      "terms": "12 days",
+      "tinNumber": "q",
+      "contractDate": "",
+      "beginningBalance": "",
+      "contactPerson": {
+        "name": "qwe",
+        "contactNumber": "wqe",
+        "primary": "primary"
+      },
+      "id": 222236
     }
   ],
   "psupplier": [

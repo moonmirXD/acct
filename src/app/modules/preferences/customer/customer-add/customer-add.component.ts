@@ -21,7 +21,7 @@ export class CustomerAddComponent implements OnInit {
     public dialogRef: MatDialogRef<CustomerAddComponent>
   ) {
     this.customerForm = this.fb.group({
-      customerCode: [''],
+      customerCode: ['', Validators.required],
       customerName: ['', Validators.required],
       address: ['', Validators.required],
       salesRepresentative: [''],
@@ -31,7 +31,7 @@ export class CustomerAddComponent implements OnInit {
       beginningBalance: [''],
       contactPerson: this.fb.group({
         name: [''],
-        contactNo: [''],
+        contactNumber: [''],
         primary: ['']
       })
     });

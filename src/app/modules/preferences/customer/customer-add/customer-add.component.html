@@ -5,9 +5,13 @@
     <div class="form-row">
         <div class="form-group col-md-6">
             <label>Customer Code*</label>
-            <input type="text" class="form-control" formControlName="customerCode">
+            <input type="text" class="form-control" formControlName="customerCode"
+                [ngClass]="{ 'is-invalid': submitted && f.customerCode?.errors }">
             <label for="" class="mt-2">
                 You cannot change this once added.</label>
+            <div *ngIf="submitted && f.customerCode?.errors" class="invalid-feedback">
+                <div *ngIf="f.customerCode?.errors.required">Customer Code is required</div>
+            </div>
         </div>
 
         <div class="form-group col-md-6">
@@ -55,9 +59,9 @@
         <div class="form-group col-md-4">
             <label>Tin Number*</label>
             <input type="text" class="form-control" formControlName="tinNumber"
-                [ngClass]="{ 'is-invalid': submitted && f.tinNo?.errors }">
-            <div *ngIf="submitted && f.tinNo?.errors" class="invalid-feedback">
-                <div *ngIf="f.tinNo?.errors.required">Tin Number is required</div>
+                [ngClass]="{ 'is-invalid': submitted && f.tinNumber?.errors }">
+            <div *ngIf="submitted && f.tinNumber?.errors" class="invalid-feedback">
+                <div *ngIf="f.tinNumber?.errors.required">Tin Number is required</div>
             </div>
         </div>
 
@@ -95,7 +99,7 @@
 
     <div class="form-group">
         <label>Beggining Balance</label>
-        <input type="text" class="form-control" placeholder="" formControlName="beginningBalance"
+        <input type="text" class="form-control" placeholder="₱0.00" formControlName="beginningBalance"
             [ngClass]="{ 'is-invalid': submitted && f.beginningBalance?.errors }">
         <div *ngIf="submitted && f.beginningBalance?.errors" class="invalid-feedback">
             <div *ngIf="f.beginningBalance?.errors.required">
@@ -124,8 +128,8 @@
                 </td>
                 <td>
                     <div class="form-group d-inline-block">
-                        <input type="text" class="form-control" formControlName="contactNo"
-                            [ngClass]="{ 'is-invalid': submitted && g.contactNo?.errors }">
+                        <input type="text" class="form-control" formControlName="contactNumber"
+                            [ngClass]="{ 'is-invalid': submitted && g.contactNumber?.errors }">
                     </div>
                 </td>
                 <td>
