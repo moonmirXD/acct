@@ -42,23 +42,6 @@
   ],
   "customer": [
     {
-      "id": 2222,
-      "customerCode": "zzz",
-      "customerName": "Ryan Dela Cruz2",
-      "tinNo": "Cainta,City",
-      "terms": "2222",
-      "contactPerson": {
-        "name": null,
-        "contactNo": null,
-        "primary": null
-      },
-      "contactNumber": "12 days",
-      "salesRepresentative": "555522",
-      "address": null,
-      "contractDate": null,
-      "beginningBalance": null
-    },
-    {
       "id": 22222,
       "customerCode": "zzz",
       "customerName": "Ryan Dela Cruz2",
@@ -191,22 +174,6 @@
       "id": 222232
     },
     {
-      "customerCode": "qqq",
-      "customerName": "q",
-      "address": "q",
-      "salesRepresentative": "13 days",
-      "terms": "cash basis",
-      "tinNumber": "q",
-      "contractDate": "",
-      "beginningBalance": "1",
-      "contactPerson": {
-        "name": "q",
-        "contactNumber": "111",
-        "primary": "primary"
-      },
-      "id": 222233
-    },
-    {
       "customerCode": "q222qweqwe",
       "customerName": "q",
       "address": "q",
@@ -239,18 +206,18 @@
       "id": 222235
     },
     {
-      "customerCode": "qqzzz",
-      "customerName": "qqq",
-      "address": "qq",
-      "salesRepresentative": "",
+      "customerCode": "Do you remember",
+      "customerName": "Do you remember",
+      "address": "qqDo you remember",
+      "salesRepresentative": "cash basis",
       "terms": "12 days",
-      "tinNumber": "q",
+      "tinNumber": "Do you remember",
       "contractDate": "",
       "beginningBalance": "",
       "contactPerson": {
-        "name": "qwe",
-        "contactNumber": "wqe",
-        "primary": "primary"
+        "name": "Do you remember",
+        "contactNumber": "Do you remember",
+        "primary": "otherContact"
       },
       "id": 222236
     }

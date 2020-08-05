@@ -18,6 +18,10 @@ import { CustomerListComponent } from './customer-list/customer-list.component';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+  ],
+  entryComponents: [
+    CustomerAddComponent,
+    CustomerEditComponent
   ]
 })
 export class CustomerModule { }

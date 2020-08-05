@@ -98,12 +98,12 @@
 
 
     <div class="form-group">
-        <label>Beggining Balance</label>
+        <label>Beginning Balance</label>
         <input type="text" class="form-control" placeholder="₱0.00" formControlName="beginningBalance"
             [ngClass]="{ 'is-invalid': submitted && f.beginningBalance?.errors }">
         <div *ngIf="submitted && f.beginningBalance?.errors" class="invalid-feedback">
             <div *ngIf="f.beginningBalance?.errors.required">
-                Beggining Balance is required
+                Beginning Balance is required
             </div>
         </div>
     </div>
