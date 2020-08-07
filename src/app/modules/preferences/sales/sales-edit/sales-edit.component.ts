@@ -44,7 +44,7 @@ export class SalesEditComponent implements OnInit {
     const id = this.data.row.id;
     this.apiService.updateRequest('/sales', id, form).subscribe(res => {
       console.log(res);
-      alert('Successfully added');
+      alert('Successfully updated');
       this.onClose();
     });
   }
