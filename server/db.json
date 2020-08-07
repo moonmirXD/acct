@@ -6,6 +6,36 @@
       "author": "typicode"
     }
   ],
+  "term": [
+    {
+      "id": 1,
+      "termCode": "json-server",
+      "termDays": "typicode",
+      "termDiscounts": "typicode",
+      "termType": "typicode"
+    },
+    {
+      "termCode": "qwe",
+      "termType": "normal",
+      "termDiscounts": "aasda",
+      "termDays": "asddasadsa",
+      "id": 2
+    },
+    {
+      "termCode": "qweqwqqqqqqqqqqqqqqqqqqqqqqq",
+      "termType": "PDC",
+      "termDiscounts": "qqqqqq",
+      "termDays": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+      "id": 3
+    },
+    {
+      "termCode": "qqq",
+      "termType": "normal",
+      "termDiscounts": "qqq",
+      "termDays": "qqq",
+      "id": 4
+    }
+  ],
   "supplier": [
     {
       "supplierCode": "",

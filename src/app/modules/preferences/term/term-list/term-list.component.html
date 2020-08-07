@@ -1,0 +1,110 @@
+<div class="p-3 font-weight-bold">
+
+    <div class="row">
+        <div class="buttons">
+            <h2>Terms</h2>
+            <button mat-raised-button color="primary" (click)="onAdd()">
+                <mat-icon>add</mat-icon> Add Term
+            </button>
+        </div>
+    </div>
+</div>
+<mat-divider></mat-divider>
+
+<div class="lists">
+
+    <div class="card mt-4">
+        <div class=" card-header">
+            Terms List
+        </div>
+        <div class="example-container mat-elevation-z8" matSort>
+
+
+            <div class="buttons">
+
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search
+    " />
+                </mat-form-field>
+
+            </div>
+            <table mat-table [dataSource]="terms">
+
+                <!-- # Column -->
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <!-- Term Code Column -->
+                <ng-container matColumnDef="termCode">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Term Code </th>
+                    <td mat-cell *matCellDef="let element"> {{element.termCode}} </td>
+                </ng-container>
+
+                <!-- Term Type Column -->
+                <ng-container matColumnDef="termType">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Term Type </th>
+                    <td mat-cell *matCellDef="let element"> {{element.termType}}</td>
+                </ng-container>
+
+                <!-- Term Discounts Column -->
+                <ng-container matColumnDef="termDiscounts">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Term Discounts(%) </th>
+                    <td mat-cell *matCellDef="let element"> {{element.termDiscounts}} </td>
+                </ng-container>
+
+                <!-- Term Days Column -->
+                <ng-container matColumnDef="termDays">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Term Days </th>
+                    <td mat-cell *matCellDef="let element"> {{element.termDays}} </td>
+                </ng-container>
+
+
+                <!-- Actions Column -->
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-icon-button class="ml-2" (click)="onEdit(element)">
+                            <mat-icon>launch</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" (click)="onDelete(element.id)">
+                            <mat-icon>delete_outline</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <!-- Loading Data -->
+                <ng-container matColumnDef="loading">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        Loading data...
+                    </mat-footer-cell>
+                </ng-container>
+
+                <!-- No Data -->
+                <ng-container matColumnDef="noData">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        No data.
+                    </mat-footer-cell>
+
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <div *ngIf="noData | async" class="no-records" style="text-align: center; padding: 20px;">
+                No records found
+            </div>
+
+
+            <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+                <mat-progress-spinner color="primary" mode="indeterminate">
+                </mat-progress-spinner>
+            </mat-card>
+
+            <mat-paginator [pageSizeOptions]="[20, 25, 30]" showFirstLastButtons></mat-paginator>
+        </div>
+
+    </div>
+</div>

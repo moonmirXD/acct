@@ -1,0 +1,61 @@
+<div class="box-content">
+    <p>Add Term</p>
+    <mat-divider></mat-divider>
+    <form [formGroup]="termForm" (ngSubmit)="onSubmit(termForm.value)" class="mt-2">
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label>Term Code</label>
+                <input type="text" class="form-control" placeholder="" formControlName="termCode"
+                    [ngClass]="{ 'is-invalid': submitted && f.termCode?.errors }">
+                <div *ngIf="submitted && f.termCode?.errors" class="invalid-feedback">
+                    <div *ngIf="f.termCode?.errors.required">
+                        Term Code is required
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label>Term Type*</label>
+                <select class="form-control" formControlName="termType"
+                    [ngClass]="{ 'is-invalid': submitted && f.termType?.errors }">
+                    <option selected>Choose...</option>
+                    <option value="normal">Normal</option>
+                    <option value="PDC">PDC</option>
+                </select>
+                <div *ngIf="submitted && f.termType?.errors" class="invalid-feedback">
+                    <div *ngIf="f.termType?.errors.required">Term Type is required</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Term Discount(%)</label>
+            <input type="text" class="form-control" placeholder="" formControlName="termDiscounts"
+                [ngClass]="{ 'is-invalid': submitted && f.termDiscounts?.errors }">
+            <div *ngIf="submitted && f.termDiscounts?.errors" class="invalid-feedback">
+                <div *ngIf="f.termDiscounts?.errors.required">
+                    Term Discount is required
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Term Days</label>
+            <input type="text" class="form-control" placeholder="" formControlName="termDays"
+                [ngClass]="{ 'is-invalid': submitted && f.termDays?.errors }">
+            <div *ngIf="submitted && f.termDays?.errors" class="invalid-feedback">
+                <div *ngIf="f.termDays?.errors.required">
+                    Term Days is required
+                </div>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary mr-2">Add</button>
+            <button type="button" class="btn btn-primary" (click)="onClose()">Cancel</button>
+        </div>
+    </form>
+</div>
