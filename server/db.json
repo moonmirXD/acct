@@ -6,6 +6,14 @@
       "author": "typicode"
     }
   ],
+  "projects": [
+    {
+      "id": 1,
+      "projectName": "json-server",
+      "projectCode": "typicode",
+      "customer": "typicode"
+    }
+  ],
   "term": [
     {
       "id": 1,
