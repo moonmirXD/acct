@@ -27,6 +27,13 @@
       "termDiscounts": "qqqqqq",
       "termDays": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
       "id": 3
+    },
+    {
+      "termCode": "qqq",
+      "termType": "normal",
+      "termDiscounts": "qqq",
+      "termDays": "qqq",
+      "id": 4
     }
   ],
   "supplier": [
