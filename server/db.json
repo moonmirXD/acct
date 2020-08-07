@@ -461,9 +461,9 @@
   "bank": [
     {
       "id": "1",
-      "bankCode": "Bdo",
-      "bankName": "BPI",
-      "glAccounts": "10001"
+      "bankCode": "55522",
+      "bankName": "BPI banks",
+      "glAccounts": "Ryan Arqueza"
     },
     {
       "id": "2",
@@ -478,12 +478,6 @@
       "glAccounts": "10001"
     },
     {
-      "id": "4",
-      "bankCode": "Bdo",
-      "bankName": "BPI",
-      "glAccounts": "10001"
-    },
-    {
       "group": "1",
       "ledgerNumber": "asdasd",
       "ledgerName": "asdasd",
@@ -491,7 +485,10 @@
       "balance": "asddas",
       "description": "zxczxc",
       "bank": "",
-      "id": "nu3Yy8z"
+      "id": "nu3Yy8z",
+      "bankName": "BPI Islands",
+      "bankCode": "New bank code",
+      "glAccounts": "5555"
     },
     {
       "bankName": "new bank",

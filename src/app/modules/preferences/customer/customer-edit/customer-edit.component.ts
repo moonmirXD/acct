@@ -55,7 +55,7 @@ export class CustomerEditComponent implements OnInit {
     const id = this.data.row.id;
     this.apiService.updateRequest('/customer', id, form).subscribe(res => {
       console.log('HTTP response ', res);
-      alert('Successfully added');
+      alert('Successfully updated');
       this.onClose();
     }
       , err => console.log('HTTP Error ', err)
