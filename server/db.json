@@ -6,6 +6,15 @@
       "author": "typicode"
     }
   ],
+  "term": [
+    {
+      "id": 1,
+      "termCode": "json-server",
+      "termDays": "typicode",
+      "termDiscounts": "typicode",
+      "termType": "typicode"
+    }
+  ],
   "supplier": [
     {
       "supplierCode": "",
