@@ -1,11 +1,11 @@
 <div class="box-content">
-    <p>Add Term</p>
+    <p>Add New Term</p>
     <mat-divider></mat-divider>
     <form [formGroup]="termForm" (ngSubmit)="onSubmit(termForm.value)" class="mt-2">
 
         <div class="form-row">
             <div class="form-group col-md-6">
-                <label>Term Code</label>
+                <label>Term Code*</label>
                 <input type="text" class="form-control" placeholder="" formControlName="termCode"
                     [ngClass]="{ 'is-invalid': submitted && f.termCode?.errors }">
                 <div *ngIf="submitted && f.termCode?.errors" class="invalid-feedback">
