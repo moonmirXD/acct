@@ -13,6 +13,20 @@
       "termDays": "typicode",
       "termDiscounts": "typicode",
       "termType": "typicode"
+    },
+    {
+      "termCode": "qwe",
+      "termType": "normal",
+      "termDiscounts": "aasda",
+      "termDays": "asddasadsa",
+      "id": 2
+    },
+    {
+      "termCode": "qweqwqqqqqqqqqqqqqqqqqqqqqqq",
+      "termType": "PDC",
+      "termDiscounts": "qqqqqq",
+      "termDays": "qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq",
+      "id": 3
     }
   ],
   "supplier": [

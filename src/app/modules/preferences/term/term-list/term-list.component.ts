@@ -59,7 +59,7 @@ export class TermListComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.width = '60%';
+    dialogConfig.width = '80%';
     const dialogRef = this.dialog.open(TermAddComponent);
 
     dialogRef.afterClosed().subscribe(res => {
