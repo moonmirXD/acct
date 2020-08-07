@@ -484,12 +484,6 @@
       "glAccounts": "10001"
     },
     {
-      "id": "5",
-      "bankCode": "Bdo",
-      "bankName": "BPI",
-      "glAccounts": "10001"
-    },
-    {
       "group": "1",
       "ledgerNumber": "asdasd",
       "ledgerName": "asdasd",
@@ -498,16 +492,6 @@
       "description": "zxczxc",
       "bank": "",
       "id": "nu3Yy8z"
-    },
-    {
-      "group": "1",
-      "ledgerNumber": "asdasd",
-      "ledgerName": "asdsda",
-      "opBalance": "1",
-      "balance": "45455",
-      "description": "123123",
-      "bank": "",
-      "id": "djs9KP3"
     }
   ],
   "coa": [
