@@ -1,1 +1,98 @@
-<p>payee-list works!</p>
+<div class="p-3 font-weight-bold">
+
+    <div class="row">
+        <div class="buttons">
+            <h2>Payees</h2>
+            <button mat-raised-button color="primary" (click)="onAdd()">
+                <mat-icon>add</mat-icon> Add Payee
+            </button>
+        </div>
+    </div>
+</div>
+<mat-divider></mat-divider>
+
+<div class="lists">
+
+    <div class="card mt-4">
+        <div class=" card-header">
+            Payees List
+        </div>
+        <div class="example-container mat-elevation-z8" matSort>
+
+
+            <div class="buttons">
+
+                <mat-form-field>
+                    <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search
+    " />
+                </mat-form-field>
+
+            </div>
+            <table mat-table [dataSource]="payees">
+
+                <!-- # Column -->
+                <ng-container matColumnDef="id">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+                    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+
+                <!-- Payee Code Column -->
+                <ng-container matColumnDef="payeeCode">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Payee Code </th>
+                    <td mat-cell *matCellDef="let element"> {{element.payeeCode}} </td>
+                </ng-container>
+
+                <!-- Payee Name Column -->
+                <ng-container matColumnDef="payeeName">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Payee Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.payeeName}}</td>
+                </ng-container>
+
+
+                <!-- Actions Column -->
+                <ng-container matColumnDef="actions">
+                    <th mat-header-cell *matHeaderCellDef> Actions </th>
+                    <td mat-cell *matCellDef="let element">
+                        <button mat-icon-button class="ml-2" (click)="onEdit(element)">
+                            <mat-icon>launch</mat-icon>
+                        </button>
+                        <button mat-icon-button color="warn" (click)="onDelete(element.id)">
+                            <mat-icon>delete_outline</mat-icon>
+                        </button>
+                    </td>
+                </ng-container>
+
+                <!-- Loading Data -->
+                <ng-container matColumnDef="loading">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        Loading data...
+                    </mat-footer-cell>
+                </ng-container>
+
+                <!-- No Data -->
+                <ng-container matColumnDef="noData">
+                    <mat-footer-cell *matFooterCellDef colspan="6">
+                        No data.
+                    </mat-footer-cell>
+
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <div *ngIf="noData | async" class="no-records" style="text-align: center; padding: 20px;">
+                No records found
+            </div>
+
+
+            <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+                <mat-progress-spinner color="primary" mode="indeterminate">
+                </mat-progress-spinner>
+            </mat-card>
+
+            <mat-paginator [pageSizeOptions]="[20, 25, 30]" showFirstLastButtons></mat-paginator>
+        </div>
+
+    </div>
+</div>
