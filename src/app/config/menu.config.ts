@@ -7,7 +7,13 @@ export class MenuConfig {
         accounting: [
             { title: 'Chart of Accounts', path: '/accounting/coa' },
             { title: 'Payable Entry', path: '/accounting/payable' },
-            { title: 'Section 3', path: 'Third section' },
+            { title: 'Receivable Entry', path: '/accounting/receivable' },
+            { title: 'Check Entry', path: '/accounting/check' },
+            { title: 'Receipt Entry', path: '/accounting/receipt' },
+            { title: 'Adjustment Entry', path: '/accounting/adjustment' },
+            { title: 'Credit Memo', path: '/accounting/credit-memo' },
+            { title: 'Debit Memo', path: '/accounting/debit-memo' },
+            { title: 'Voucher Entry', path: '/accounting/voucher' },
         ],
         preferences: [
             { title: 'Sales Representative', path: '/preferences/sales' },
