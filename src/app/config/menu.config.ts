@@ -16,6 +16,7 @@ export class MenuConfig {
             { title: 'Term', path: '/preferences/term' },
             { title: 'Bank', path: '/preferences/bank' },
             { title: 'Projects', path: '/preferences/projects' },
+            { title: 'Payee', path: '/preferences/payee' }
         ]
     };
 
