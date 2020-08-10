@@ -6,7 +6,7 @@ export class MenuConfig {
     public defaults: any = {
         accounting: [
             { title: 'Chart of Accounts', path: '/accounting/coa' },
-            { title: 'Section 2', path: '/preferences/bank' },
+            { title: 'Payable Entry', path: '/accounting/payable' },
             { title: 'Section 3', path: 'Third section' },
         ],
         preferences: [
