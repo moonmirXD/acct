@@ -1,0 +1,25 @@
+<div class="box-content">
+    <p>Edit Payee</p>
+    <mat-divider></mat-divider>
+    <form [formGroup]="payeeForm" (ngSubmit)="onSubmit(payeeForm.value)" class="mt-2">
+
+
+        <div class="form-group">
+            <label>Payee Name*</label>
+            <input type="text" class="form-control" placeholder="" formControlName="payeeName"
+                [ngClass]="{ 'is-invalid': submitted && f.payeeName?.errors }">
+            <div *ngIf="submitted && f.payeeName?.errors" class="invalid-feedback">
+                <div *ngIf="f.payeeName?.errors.required">
+                    Payee Name is required
+                </div>
+            </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary mr-2">Update</button>
+            <button type="button" class="btn btn-primary" (click)="onClose()">Cancel</button>
+        </div>
+    </form>
+</div>
