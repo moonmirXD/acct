@@ -16,8 +16,12 @@ const routes: Routes = [
   //     import("./components/auth/auth.module").then((m) => m.AuthModule),
   // },
   {
-    path: '',
+    path: 'pages',
     loadChildren: () => import('./modules/pages.module').then((m) => m.PagesModule),
+  },
+  {
+    path: '',
+    loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   { path: '**', redirectTo: '', pathMatch: 'full' }
 
