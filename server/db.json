@@ -6,6 +6,43 @@
       "author": "typicode"
     }
   ],
+  "login": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "qweqweqwewq",
+      "password": "qweqweqwe",
+      "id": 2
+    },
+    {
+      "username": "qweqwasd",
+      "password": "asdxzczxc",
+      "id": 3
+    },
+    {
+      "username": "asd",
+      "password": "a",
+      "id": 4
+    },
+    {
+      "username": "qqqq",
+      "password": "qqq",
+      "id": 5
+    },
+    {
+      "username": "qww",
+      "password": "ww",
+      "id": 6
+    },
+    {
+      "username": "qq",
+      "password": "qqq",
+      "id": 7
+    }
+  ],
   "projects": [
     {
       "id": 1,
