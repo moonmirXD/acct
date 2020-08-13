@@ -36,6 +36,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RouterModule } from '@angular/router';
 import { MatOptionModule } from '@angular/material/core';
+import { NgxMatDatetimePickerModule, NgxMatTimepickerModule, NgxMatNativeDateModule } from '@angular-material-components/datetime-picker';
 
 
 @NgModule({
@@ -75,7 +76,10 @@ import { MatOptionModule } from '@angular/material/core';
     MatPaginatorModule,
     MatOptionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    NgxMatDatetimePickerModule,
+    NgxMatTimepickerModule,
+    MatNativeDateModule,
+    NgxMatNativeDateModule
   ],
   exports: [
     RouterModule,
@@ -112,12 +116,15 @@ import { MatOptionModule } from '@angular/material/core';
     MatPaginatorModule,
     MatOptionModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    NgxMatDatetimePickerModule,
+    NgxMatTimepickerModule,
+    NgxMatNativeDateModule,
   ],
   providers: [
     MatDatepickerModule,
-    MatNativeDateModule
-
+    MatNativeDateModule,
+    NgxMatTimepickerModule
   ],
 })
 export class MaterialModule { }

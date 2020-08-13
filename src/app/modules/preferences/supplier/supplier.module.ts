@@ -20,13 +20,6 @@ import { SupplierViewComponent } from './supplier-view/supplier-view.component';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    NgxMatDatetimePickerModule,
-    NgxMatTimepickerModule,
-    MatNativeDateModule,
-    NgxMatNativeDateModule
-  ],
-  providers: [
-    NgxMatTimepickerModule
   ],
   entryComponents: [
     SupplierAddComponent,
