@@ -6,6 +6,23 @@
       "author": "typicode"
     }
   ],
+  "login": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "username": "qweqweqwewq",
+      "password": "qweqweqwe",
+      "id": 2
+    },
+    {
+      "username": "qweqwasd",
+      "password": "asdxzczxc",
+      "id": 3
+    }
+  ],
   "projects": [
     {
       "id": 1,
