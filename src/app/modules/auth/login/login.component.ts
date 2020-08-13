@@ -27,12 +27,12 @@ export class LoginComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit(form) {
     this.submitted = true;
     if (this.loginForm.invalid) {
       return;
     } else {
-      this.authenticationService.loginUser(this.loginForm.value).subscribe(
+      this.authenticationService.loginUser(form).subscribe(
         (res: any) => {
           alert('Successfully Login');
           localStorage.setItem('token', res.token);
