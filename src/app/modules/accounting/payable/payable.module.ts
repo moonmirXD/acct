@@ -17,6 +17,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
+  ],
+  entryComponents: [
+    PayableAddComponent, PayableEditComponent
   ]
 })
 export class PayableModule { }

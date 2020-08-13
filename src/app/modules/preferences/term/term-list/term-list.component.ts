@@ -60,6 +60,7 @@ export class TermListComponent implements OnInit {
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
     dialogConfig.width = '80%';
+    dialogConfig.maxHeight = '90vh';
     const dialogRef = this.dialog.open(TermAddComponent);
 
     dialogRef.afterClosed().subscribe(res => {
