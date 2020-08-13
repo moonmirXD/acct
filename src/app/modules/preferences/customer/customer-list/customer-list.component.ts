@@ -63,6 +63,7 @@ export class CustomerListComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
+    dialogConfig.maxHeight = '100vh';
     dialogConfig.width = '60%';
     const dialogRef = this.dialog.open(CustomerAddComponent);
 
