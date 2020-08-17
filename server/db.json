@@ -6,6 +6,13 @@
       "author": "typicode"
     }
   ],
+  "user": [
+    {
+      "id": 1,
+      "userName": "json-server",
+      "userCode": "typicode"
+    }
+  ],
   "login": [
     {
       "id": 1,
