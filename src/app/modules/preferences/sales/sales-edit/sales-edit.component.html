@@ -1,6 +1,6 @@
 <p>Sales Representative</p>
 <mat-divider></mat-divider>
-<form [formGroup]="salesForm" (ngSubmit)="onSubmit(salesForm.value)">
+<form [formGroup]="salesForm" (ngSubmit)="onSubmit(salesForm.value)" mat-dialog-content>
     <div class="form-group">
         <label>ID *</label>
         <input type="email" class="form-control" formControlName="id">
