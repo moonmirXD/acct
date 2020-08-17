@@ -18,7 +18,7 @@ const routes: Routes = [
   // },
   {
     path: 'pages',
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard], // Remove comment when in production mode 
     loadChildren: () => import('./modules/pages.module').then((m) => m.PagesModule),
   },
   {

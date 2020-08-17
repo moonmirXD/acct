@@ -85,7 +85,7 @@ export class SupplierListComponent implements OnInit {
     const dialogConfig = new MatDialogConfig();
     dialogConfig.disableClose = true;
     dialogConfig.autoFocus = true;
-    dialogConfig.width = '60%';
+    dialogConfig.width = '95%';
     const dialogRef = this.dialog.open(SupplierAddComponent);
 
     dialogRef.afterClosed().subscribe(res => {
