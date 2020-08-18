@@ -11,6 +11,18 @@
       "id": 1,
       "userName": "json-server",
       "userCode": "typicode"
+    },
+    {
+      "idNo": "q",
+      "firstName": "ewqwq",
+      "middleName": "weqwe",
+      "lastName": "qweqweqwe",
+      "address": "qwe",
+      "contactNo": "qwewqe",
+      "userType": "Accountant 3",
+      "email": "asas",
+      "password": "saasasas",
+      "id": 2
     }
   ],
   "login": [
@@ -68,6 +80,11 @@
       "username": "w",
       "password": "ew",
       "id": 11
+    },
+    {
+      "username": "qewq",
+      "password": "weqwe",
+      "id": 12
     }
   ],
   "projects": [
