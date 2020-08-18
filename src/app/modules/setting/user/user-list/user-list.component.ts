@@ -57,7 +57,7 @@ export class UserListComponent implements OnInit {
   }
 
   onView(row) {
-    this.router.navigate(['preferences/customer/view', row]);
+    this.router.navigate(['pages/setting/user/view', row]);
   }
 
   onAdd() {

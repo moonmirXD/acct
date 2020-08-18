@@ -56,7 +56,7 @@ export class CustomerListComponent implements OnInit {
   }
 
   onView(row) {
-    this.router.navigate(['preferences/customer/view', row]);
+    this.router.navigate(['pages/preferences/customer/view', row]);
   }
 
   onAdd() {

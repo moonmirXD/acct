@@ -6,7 +6,7 @@
         <div class="form-group col-md-6">
             <label>User Code*</label>
             <input type="text" class="form-control" formControlName="idNo"
-                [ngClass]="{ 'is-invalid': submitted && f.idNo?.errors }">
+                [ngClass]="{ 'is-invalid': submitted && f.idNo?.errors }" disabled>
 
             <div *ngIf="submitted && f.idNo?.errors" class="invalid-feedback">
                 <div *ngIf="f.idNo?.errors.required">User Code is required</div>

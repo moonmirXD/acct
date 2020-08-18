@@ -8,18 +8,13 @@
   ],
   "user": [
     {
-      "id": 1,
-      "userName": "json-server",
-      "userCode": "typicode"
-    },
-    {
       "idNo": "q",
       "firstName": "ewqwq",
       "middleName": "weqwe",
       "lastName": "qweqweqwe",
       "address": "qwe",
       "contactNo": "qwewqe",
-      "userType": "Accountant 3",
+      "userType": "Admin",
       "email": "asas",
       "password": "saasasas",
       "id": 2
