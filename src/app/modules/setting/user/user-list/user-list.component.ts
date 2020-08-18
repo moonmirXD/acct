@@ -90,7 +90,7 @@ export class UserListComponent implements OnInit {
 
   onDelete(row) {
     if (confirm('Are you sure you want to delete this?')) {
-      this.apiService.deleteRequest('/customer', row).subscribe(res => {
+      this.apiService.deleteRequest('/user', row).subscribe(res => {
         console.log('Deleted');
         this.getUsers();
       });
