@@ -18,6 +18,18 @@
       "email": "asas",
       "password": "saasasas",
       "id": 2
+    },
+    {
+      "idNo": "wa",
+      "firstName": "wa",
+      "middleName": "wa",
+      "lastName": "wa",
+      "address": "wa",
+      "contactNo": "wawa",
+      "userType": "Accountant 1",
+      "email": "aa",
+      "password": "a",
+      "id": 3
     }
   ],
   "login": [
