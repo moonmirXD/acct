@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute, Params } from '@angular/router';
+import { ApiService } from 'src/app/core/http/api.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-user-view',
@@ -7,9 +11,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserViewComponent implements OnInit {
 
-  constructor() { }
+  private routeSub: Subscription;
+  details: any;
+  constructor(private route: ActivatedRoute, private apiService: ApiService, private location: Location) {
+  }
 
   ngOnInit(): void {
+    this.routeSub = this.route.params.subscribe((params: Params): void => {
+      this.apiService.getRequestById('/user', params.id).subscribe(res => {
+        this.details = res;
+      }, err => {
+        console.log('HTTP error ', err);
+      });
+    });
+
+  }
+
+  goBack() {
+    this.location.back();
+  }
+
+  ngOnDestroy(): void {
+    this.routeSub.unsubscribe();
   }
 
 }

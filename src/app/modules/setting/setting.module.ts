@@ -6,7 +6,7 @@ import { UserAddComponent } from './user/user-add/user-add.component';
 
 
 @NgModule({
-  declarations: [UserAddComponent],
+  declarations: [],
   imports: [
     CommonModule,
     SettingRoutingModule

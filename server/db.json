@@ -6,6 +6,20 @@
       "author": "typicode"
     }
   ],
+  "user": [
+    {
+      "idNo": "q",
+      "firstName": "ewqwq",
+      "middleName": "weqwe",
+      "lastName": "qweqweqwe",
+      "address": "qwe",
+      "contactNo": "qwewqe",
+      "userType": "Admin",
+      "email": "asas",
+      "password": "saasasas",
+      "id": 2
+    }
+  ],
   "login": [
     {
       "id": 1,
@@ -61,6 +75,11 @@
       "username": "w",
       "password": "ew",
       "id": 11
+    },
+    {
+      "username": "qewq",
+      "password": "weqwe",
+      "id": 12
     }
   ],
   "projects": [
