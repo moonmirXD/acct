@@ -6,6 +6,18 @@
       "author": "typicode"
     }
   ],
+  "usertype": [
+    {
+      "name": "qweqwe",
+      "code": "aa",
+      "id": 1
+    },
+    {
+      "name": "hehe",
+      "code": "hehe",
+      "id": 2
+    }
+  ],
   "user": [
     {
       "idNo": "q",
