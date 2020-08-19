@@ -8,9 +8,14 @@
   ],
   "usertype": [
     {
-      "idNo": 1,
-      "userCode": "json-server",
-      "userType": "typicode"
+      "name": "qweqwe",
+      "code": "aa",
+      "id": 1
+    },
+    {
+      "name": "qwez",
+      "code": "zzzz",
+      "id": 2
     }
   ],
   "user": [
