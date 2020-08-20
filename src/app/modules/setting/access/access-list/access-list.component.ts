@@ -19,6 +19,33 @@ export class AccessListComponent implements OnInit {
   noData: any;
   isLoading = true;
 
+  configs = {
+    userType: [
+      { title: 'Accountant 1', value: 'Accountant 1' },
+      { title: 'Accountant 2', value: 'Accountant 2' },
+      { title: 'Accountant 3', value: 'Accountant 3' },
+      { title: 'Accountant 4', value: 'Accountant 4' },
+      { title: 'Admin 4', value: 'Admin 4' },
+    ],
+    class: [
+      { title: 'All', value: 'All' },
+      { title: 'Account', value: 'Account' },
+      { title: 'Bank', value: 'Bank' },
+      { title: 'Chart of Account', value: 'Chart of Account' },
+      { title: 'Customer', value: 'Customer' },
+      { title: 'Bank', value: 'Bank' },
+      { title: 'Entry', value: 'Entry' },
+      { title: 'Menu', value: 'Menu' },
+      { title: 'Class', value: 'Class' },
+      { title: 'Profile', value: 'Profile' },
+      { title: 'Report', value: 'Report' },
+      { title: 'Voucher', value: 'Voucher' },
+      { title: 'Sales Representative', value: 'Sales Representative' },
+      { title: 'Supplier', value: 'Supplier' },
+      { title: 'Term', value: 'Term' },
+      { title: 'User', value: 'User' },
+    ]
+  };
   constructor(
     private apiService: ApiService,
     private dialog: MatDialog,
