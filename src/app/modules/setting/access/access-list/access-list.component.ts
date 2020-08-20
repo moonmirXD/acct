@@ -81,6 +81,17 @@ export class AccessListComponent implements OnInit {
     }, error => this.isLoading = false);
   }
 
+  public onChangeUserType(event): void {
+    const newVal = event.target.value;
+    console.log(newVal);
+  }
+
+  public onChangeClass(event): void {
+    const newVal = event.target.value;
+    this.showTable = !this.showTable;
+    console.log(newVal);
+  }
+
   /*  onView(row) {
      this.router.navigate(['pages/preferences/customer/view', row]);
    }

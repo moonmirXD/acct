@@ -18,7 +18,7 @@
 
     <div class="col-md-6 mb-3 mt-4">
         <label>User Type*</label>
-        <select class="custom-select" id="validationCustom04" required>
+        <select class="custom-select" id="validationCustom04" required (change)="onChangeUserType($event)">
             <option selected disabled value="">Choose...</option>
             <option *ngFor="let config of configs.userType" value="{{ config.value }}">{{ config.title }}</option>
         </select>
@@ -29,9 +29,10 @@
 
     <div class="col-md-6 mb-3">
         <label for="validationCustom04">Class</label>
-        <select class="custom-select" id="validationCustom04" required>
+        <select class="custom-select" id="validationCustom04" required (change)="onChangeClass($event)">
             <option selected disabled value="all"> All </option>
-            <option *ngFor="let config of configs.class" value="{{ config.value }}">{{ config.title }}</option>
+            <option *ngFor="let config of configs.class" value="{{ config.value }}">
+                {{ config.title }}</option>
         </select>
         <div class="invalid-feedback">
             Please select a valid state.
