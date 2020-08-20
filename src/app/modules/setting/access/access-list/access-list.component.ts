@@ -92,47 +92,4 @@ export class AccessListComponent implements OnInit {
     console.log(newVal);
   }
 
-  /*  onView(row) {
-     this.router.navigate(['pages/preferences/customer/view', row]);
-   }
- 
-   onAdd() {
-     const dialogConfig = new MatDialogConfig();
-     dialogConfig.disableClose = true;
-     dialogConfig.autoFocus = true;
-     dialogConfig.maxHeight = '100vh';
-     dialogConfig.width = '60%';
-     const dialogRef = this.dialog.open(CustomerAddComponent);
- 
-     dialogRef.afterClosed().subscribe(res => {
-       this.getCustomers();
-     });
-   }
- 
-   onEdit(row) {
-     const dialogConfig = new MatDialogConfig();
-     dialogConfig.disableClose = true;
-     dialogConfig.autoFocus = true;
-     dialogConfig.width = '60%';
-     const dialogRef = this.dialog.open(CustomerEditComponent,
-       {
-         data: { row }
-       });
- 
-     dialogRef.afterClosed().subscribe(res => {
-       this.getCustomers();
-     });
-   }
- 
-   onDelete(row) {
-     if (confirm('Are you sure you want to delete this?')) {
-       this.apiService.deleteRequest('/customer', row).subscribe(res => {
-         console.log('Deleted');
-         this.getCustomers();
-       });
-     } else {
-       console.log('Thing was not saved to the database.');
-     }
-   } */
-
 }
