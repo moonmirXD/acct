@@ -30,7 +30,6 @@
     <div class="col-md-6 mb-3">
         <label for="validationCustom04">Class</label>
         <select class="custom-select" id="validationCustom04" required (change)="onChangeClass($event)">
-            <option selected disabled value="all"> All </option>
             <option *ngFor="let config of configs.class" value="{{ config.value }}">
                 {{ config.title }}</option>
         </select>
@@ -59,62 +58,62 @@
                 </mat-form-field>
 
             </div>
-            <table mat-table [dataSource]="lists">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-                <!-- # Column -->
+                <!-- ID Column -->
                 <ng-container matColumnDef="id">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> # </th>
+                    <th mat-header-cell *matHeaderCellDef> # </th>
                     <td mat-cell *matCellDef="let element"> {{element.id}} </td>
                 </ng-container>
 
-                <!-- Title Column -->
+                <!-- TITLE Column -->
                 <ng-container matColumnDef="title">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+                    <th mat-header-cell *matHeaderCellDef> TITLE </th>
                     <td mat-cell *matCellDef="let element"> {{element.title}} </td>
                 </ng-container>
 
-                <!-- Class/Function Name Column -->
-                <ng-container matColumnDef="function">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Class/Function Name </th>
-                    <td mat-cell *matCellDef="let element"> {{element.function}}</td>
+                <!-- CLASS Column -->
+                <ng-container matColumnDef="class">
+                    <th mat-header-cell *matHeaderCellDef> CLASS </th>
+                    <td mat-cell *matCellDef="let element"> {{element.class}} </td>
                 </ng-container>
 
-                <!-- Actions Column -->
-                <ng-container matColumnDef="actions">
-                    <th mat-header-cell *matHeaderCellDef> Actions </th>
-                    <td mat-cell *matCellDef="let element">
-                        <!-- <button mat-icon-button class="ml-2" color="primary" (click)="onView(element.id)">
-                            <mat-icon>pageview</mat-icon>
-                        </button>
-                        <button mat-icon-button class="ml-2" (click)="onEdit(element)">
-                            <mat-icon>launch</mat-icon>
-                        </button>
-                        <button mat-icon-button color="warn" (click)="onDelete(element.id)">
-                            <mat-icon>delete_outline</mat-icon>
-                        </button> -->
-                    </td>
-                </ng-container>
-
-                <!-- Loading Data -->
-                <ng-container matColumnDef="loading">
-                    <mat-footer-cell *matFooterCellDef colspan="6">
-                        Loading data...
-                    </mat-footer-cell>
-                </ng-container>
-
-                <!-- No Data -->
-                <ng-container matColumnDef="noData">
-                    <mat-footer-cell *matFooterCellDef colspan="6">
-                        No data.
-                    </mat-footer-cell>
-
+                <!-- ACTION Column -->
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> ACTION </th>
+                    <td mat-cell *matCellDef="let element"> {{element.action}} </td>
                 </ng-container>
 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
 
-            <div *ngIf="noData | async" class="no-records" style="text-align: center; padding: 20px;">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Class</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr [ngClass]="'first second'" [ngClass]="'second second'">
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- <div *ngIf="noData | async" class="no-records" style="text-align: center; padding: 20px;">
                 No records found
             </div>
 
@@ -122,7 +121,7 @@
             <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
                 <mat-progress-spinner color="primary" mode="indeterminate">
                 </mat-progress-spinner>
-            </mat-card>
+            </mat-card> -->
 
             <mat-paginator [pageSizeOptions]="[20, 25, 30]" showFirstLastButtons></mat-paginator>
         </div>

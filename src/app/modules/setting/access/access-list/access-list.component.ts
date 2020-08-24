@@ -7,6 +7,15 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { map } from 'rxjs/operators';
 
+
+
+const ACCOUNT_DATA = [
+  { id: 1, title: 'Account', class: 'account' },
+  { title: 'Page' },
+  { title: 'list_account_page', class: 'List Account Page' },
+  { title: 'Method' },
+];
+
 @Component({
   selector: 'app-access-list',
   templateUrl: './access-list.component.html',
@@ -18,6 +27,11 @@ export class AccessListComponent implements OnInit {
   rows: any;
   noData: any;
   isLoading = true;
+
+  accountPage = false; accountMethod = false;
+  bankPage = false; bankMethod = false;
+  coaPage = false; coaMethod = false;
+  customerPage = false; customerMethod = false;
 
   configs = {
     userType: [
@@ -52,43 +66,47 @@ export class AccessListComponent implements OnInit {
     private router: Router
   ) { }
 
-  displayedColumns: string[] = ['id', 'title', 'function', 'actions'];
+
+  displayedColumns: string[] = ['id', 'title', 'class', 'action'];
+  dataSource: any;
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort: MatSort;
   ngOnInit(): void {
-    this.getLists();
-  }
-
-  applyFilter(filterValue: string) {
-    this.lists.filter = filterValue.trim().toLowerCase();
+    // this.getLists();
   }
 
 
-  getLists() {
-    this.apiService.getRequest('/customer').subscribe((res: any) => {
-      this.rows = res;
-      this.lists = new MatTableDataSource(this.rows);
-      this.lists.paginator = this.paginator;
-      this.lists.sort = this.sort;
-      console.log(res);
-
-      this.isLoading = false;
-
-      this.noData = this.lists
-        .connect()
-        .pipe(map((data: any) => data.length === 0));
-    }, error => this.isLoading = false);
-  }
+  /*   getLists() {
+      this.apiService.getRequest('/usertype').subscribe((res: any) => {
+        this.rows = res;
+        this.lists = new MatTableDataSource(this.rows);
+        this.lists.paginator = this.paginator;
+        this.lists.sort = this.sort;
+        console.log(res);
+  
+        this.isLoading = false;
+  
+        this.noData = this.lists
+          .connect()
+          .pipe(map((data: any) => data.length === 0));
+      }, error => this.isLoading = false);
+    } */
 
   public onChangeUserType(event): void {
     const newVal = event.target.value;
+    this.showTable = !this.showTable;
     console.log(newVal);
   }
 
   public onChangeClass(event): void {
     const newVal = event.target.value;
-    this.showTable = !this.showTable;
+    if (newVal === 'All') {
+      this.dataSource = ACCOUNT_DATA;
+    }
+    if (newVal === 'Account') {
+      this.dataSource = ACCOUNT_DATA;
+    }
     console.log(newVal);
   }
 
