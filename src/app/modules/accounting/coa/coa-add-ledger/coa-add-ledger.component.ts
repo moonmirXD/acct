@@ -15,12 +15,13 @@ export class CoaAddLedgerComponent implements OnInit {
   constructor(private fb: FormBuilder, private apiService: ApiService) {
     this.ledgerForm = this.fb.group({
       group: ['', Validators.required],
-      ledgerNumber: ['', Validators.required],
-      ledgerName: ['', Validators.required],
-      opBalance: ['', Validators.required],
-      balance: ['', Validators.required],
-      description: ['', Validators.required],
-      bank: ['', Validators.required]
+      number: ['', Validators.required],
+      name: ['', Validators.required],
+      openingBalance: [''],
+      type: ['', Validators.required],
+      amount: ['', Validators.required],
+      description: [''],
+      isCashAccount: ['', Validators.required]
     });
   }
 
@@ -29,7 +30,7 @@ export class CoaAddLedgerComponent implements OnInit {
     { text: 3, value: 'Group2' }
   ];
 
-  opBalances = [
+  openingBalances = [
     { text: 'Cr', value: 'Cr' },
     { text: 'Dr', value: 'Dr' }
   ];
