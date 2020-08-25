@@ -39,7 +39,7 @@
             <label>Parent Group*</label>
             <select class="form-control" formControlName="parent"
                 [ngClass]="{ 'is-invalid': submitted && f.parent?.errors }">
-                <option selected>Select Parent-Group</option>
+                <option value="" disabled>Select Parent-Group</option>
                 <option value="cash basis">Assets(100)</option>
                 <option value="Liabilities">Liabilities(200)</option>
                 <option value="Equity">Equity(300)</option>
