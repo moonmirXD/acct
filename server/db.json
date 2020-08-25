@@ -1037,6 +1037,26 @@
       "description": "",
       "isCashAccount": "false",
       "id": 49
+    },
+    {
+      "group": "",
+      "number": "",
+      "name": "",
+      "openingBalance": "",
+      "amount": "",
+      "description": "",
+      "isCashAccount": "true",
+      "id": 50
+    },
+    {
+      "group": "",
+      "number": "",
+      "name": "",
+      "openingBalance": "",
+      "amount": "",
+      "description": "",
+      "isCashAccount": "false",
+      "id": 51
     }
   ],
   "comments": [

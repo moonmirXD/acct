@@ -37,8 +37,8 @@
 
         <div class="form-group">
             <label>Parent Group*</label>
-            <select class="form-control" formControlName="Parent"
-                [ngClass]="{ 'is-invalid': submitted && f.Parent?.errors }">
+            <select class="form-control" formControlName="parent"
+                [ngClass]="{ 'is-invalid': submitted && f.parent?.errors }">
                 <option selected>Select Parent-Group</option>
                 <option value="cash basis">Assets(100)</option>
                 <option value="Liabilities">Liabilities(200)</option>
@@ -46,8 +46,8 @@
                 <option value="Income">Income(400)</option>
                 <option value="Expense">Expense(500)</option>
             </select>
-            <div *ngIf="submitted && f.Parent?.errors" class="invalid-feedback">
-                <div *ngIf="f.Parent?.errors.required">Parent Group is required</div>
+            <div *ngIf="submitted && f.parent?.errors" class="invalid-feedback">
+                <div *ngIf="f.parent?.errors.required">Parent Group is required</div>
             </div>
         </div>
 

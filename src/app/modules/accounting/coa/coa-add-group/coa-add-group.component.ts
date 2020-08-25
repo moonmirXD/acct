@@ -20,7 +20,7 @@ export class CoaAddGroupComponent implements OnInit {
       type: ['', Validators.required],
       GroupNumber: ['', Validators.required],
       GroupName: ['', Validators.required],
-      Parent: [''],
+      parent: [''],
     });
   }
 

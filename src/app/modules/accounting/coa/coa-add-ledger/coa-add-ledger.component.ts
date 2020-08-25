@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/core/http/api.service';
-
+import { Location } from '@angular/common';
+import { MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-coa-add-ledger',
   templateUrl: './coa-add-ledger.component.html',
@@ -13,7 +14,7 @@ export class CoaAddLedgerComponent implements OnInit {
   groupName: any;
   checked: boolean;
 
-  constructor(private fb: FormBuilder, private apiService: ApiService) {
+  constructor(private fb: FormBuilder, private apiService: ApiService, public dialogRef: MatDialogRef<CoaAddLedgerComponent>) {
     this.ledgerForm = this.fb.group({
       group: ['', Validators.required],
       number: ['', Validators.required],
@@ -52,4 +53,7 @@ export class CoaAddLedgerComponent implements OnInit {
     });
   }
 
+  onClose() {
+    this.dialogRef.close();
+  }
 }
