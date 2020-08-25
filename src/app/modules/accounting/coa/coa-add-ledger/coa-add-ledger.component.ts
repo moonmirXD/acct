@@ -11,6 +11,7 @@ export class CoaAddLedgerComponent implements OnInit {
   ledgerForm: FormGroup;
   opBalanceName: any;
   groupName: any;
+  checked: boolean;
 
   constructor(private fb: FormBuilder, private apiService: ApiService) {
     this.ledgerForm = this.fb.group({
@@ -18,10 +19,9 @@ export class CoaAddLedgerComponent implements OnInit {
       number: ['', Validators.required],
       name: ['', Validators.required],
       openingBalance: [''],
-      type: ['', Validators.required],
       amount: ['', Validators.required],
       description: [''],
-      isCashAccount: ['', Validators.required]
+      isCashAccount: ['true', Validators.required]
     });
   }
 
@@ -35,9 +35,16 @@ export class CoaAddLedgerComponent implements OnInit {
     { text: 'Dr', value: 'Dr' }
   ];
 
+  onNotCashAccount() {
+    this.ledgerForm.patchValue({
+      isCashAccount: 'false'
+    });
+  }
 
   ngOnInit(): void {
   }
+
+  get f() { return this.ledgerForm.controls; }
 
   onSubmit(form) {
     this.apiService.postRequest('/sample', form).subscribe(res => {

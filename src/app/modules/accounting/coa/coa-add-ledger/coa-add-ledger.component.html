@@ -67,10 +67,10 @@
 
     <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
         <label class="btn btn-secondary active">
-            <input [formControl]="ledgerForm.controls.isCashAccount" type="radio" value="true" checked> Cash Account
+            <input type="radio" formControlName="isCashAccount" [value]="zxc"> Cash Account
         </label>
-        <label class="btn btn-secondary">
-            <input [formControl]="ledgerForm.controls.isCashAccount" type="radio" value="false"> Not Cash Account
+        <label class="btn btn-secondary" (click)="onNotCashAccount()">
+            <input formControlName="isCashAccount" type="radio" [value]="ss"> Not Cash Account
         </label>
     </div>
 
