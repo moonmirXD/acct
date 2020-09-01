@@ -9,6 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./coa-add-ledger.component.scss']
 })
 export class CoaAddLedgerComponent implements OnInit {
+  submitted = false;
   ledgerForm: FormGroup;
   opBalanceName: any;
   groupName: any;
