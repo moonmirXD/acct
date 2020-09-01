@@ -1,37 +1,57 @@
-<!-- Default form contact -->
-<form class="text-center border border-light p-5" (ngSubmit)="onSubmit(ledgerForm.value)" [formGroup]="ledgerForm">
-
-    <p>Ledger</p>
+<p>Add New Ledger</p>
+<mat-divider></mat-divider>
+<!-- class="text-center border border-light p-5" -->
+<form (ngSubmit)="onSubmit(ledgerForm.value)" [formGroup]="ledgerForm">
 
     <!-- Group -->
-    <label>Group</label>
-    <select class="browser-default custom-select mb-4" formControlName="group">
+    <label class="mt-4">Group</label>
+    <select class="browser-default custom-select mb-4" formControlName="group"
+        [ngClass]="{ 'is-invalid': submitted && f.group?.errors }">
         <option value="" disabled>Choose option</option>
         <option *ngFor="let group of groups" value="{{ group.value }}">{{ group.text }}</option>
     </select>
+    <div *ngIf="submitted && f.group?.errors" class="invalid-feedback">
+        <div *ngIf="f.group?.errors.required">Group is required</div>
+    </div>
 
     <!-- Ledger Number -->
-    <input type="text" class="form-control mb-4" placeholder="Ledger Number*" formControlName="ledgerNumber">
-    <mat-error *ngIf="ledgerForm.controls['ledgerNumber'].errors?.required">This field is required.</mat-error>
+    <input type="text" class="form-control mb-4" placeholder="Ledger Number*" formControlName="number"
+        [ngClass]="{ 'is-invalid': submitted && f.number?.errors }">
+    <div *ngIf="submitted && f.number?.errors" class="invalid-feedback">
+        <div *ngIf="f.number?.errors.required">Ledger Number is required</div>
+    </div>
 
     <!-- Ledger Name -->
-    <input type="text" class="form-control mb-4" placeholder="Ledger Name*" formControlName="ledgerName">
+    <input type="text" class="form-control mb-4" placeholder="Ledger Name*" formControlName="name"
+        [ngClass]="{ 'is-invalid': submitted && f.name?.errors }">
+    <div *ngIf="submitted && f.name?.errors" class="invalid-feedback">
+        <div *ngIf="f.name?.errors.required">Ledger Name is required</div>
+    </div>
 
     <!-- Opening Balance -->
-
     <label>Opening Balance</label>
 
     <div class="row">
 
         <div class="col-xs-6 col-sm-6 col-6">
-            <select class="browser-default custom-select mb-4" formControlName="opBalance">
+            <select class="browser-default custom-select mb-4" formControlName="openingBalance"
+                [ngClass]="{ 'is-invalid': submitted && f.openingBalance?.errors }">
                 <option value="" disabled>Choose option</option>
-                <option value="1" *ngFor="let opBalance of opBalances" value="{{ opBalance.value}}">{{opBalance.text}}
+                <option value="1" *ngFor="let openingBalance of openingBalances" value="{{ openingBalance.value}}">
+                    {{openingBalance.text}}
                 </option>
             </select>
+            <div *ngIf="submitted && f.openingBalance?.errors" class="invalid-feedback">
+                <div *ngIf="f.openingBalance?.errors.required">Opening Balance is required</div>
+            </div>
         </div>
+
         <div class="col-xs-6 col-sm-6 col-6">
-            <input type="text" class="form-control mb-4" placeholder="0.00*" formControlName="balance">
+            <input type="text" class="form-control mb-4" placeholder="0.00" formControlName="amount"
+                [ngClass]="{ 'is-invalid': submitted && f.amount?.errors }">
+            <div *ngIf="submitted && f.amount?.errors" class="invalid-feedback">
+                <div *ngIf="f.amount?.errors.required">Amount is required</div>
+            </div>
         </div>
     </div>
 
@@ -40,11 +60,24 @@
     <div class="form-group">
         <textarea class="form-control rounded-0" rows="3" placeholder="Description*"
             formControlName="description"></textarea>
+        <div *ngIf="submitted && f.description?.errors" class="invalid-feedback">
+            <div *ngIf="f.description?.errors.required">Description is required</div>
+        </div>
     </div>
 
+    <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+            <input type="radio" formControlName="isCashAccount" [value]="zxc"> Cash Account
+        </label>
+        <label class="btn btn-secondary" (click)="onNotCashAccount()">
+            <input formControlName="isCashAccount" type="radio" [value]="ss"> Not Cash Account
+        </label>
+    </div>
 
-
-    <!-- Submit button -->
-    <button class="btn btn-primary" block="true" type="submit">Submit</button>
+    <mat-divider></mat-divider>
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary mr-2">Add</button>
+        <button type="button" class="btn btn-primary" (click)="onClose()">Cancel</button>
+    </div>
 
 </form>
