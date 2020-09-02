@@ -25,11 +25,11 @@ export class MenuConfig {
             { title: 'Payee', path: '/pages/preferences/payee' }
         ],
         settings: [
-            { title: 'USER', path: '/pages/preferences/sales' },
-            { title: 'MENU', path: '/pages/preferences/supplier' },
-            { title: 'USER TYPE', path: '/pages/preferences/customer' },
-            { title: 'ACCESS', path: '/pages/preferences/term' },
-            { title: 'CLASS', path: '/pages/preferences/bank' }
+            { title: 'USER', path: '/pages/setting/user' },
+            { title: 'MENU', path: '/pages/setting/menu' },
+            { title: 'USER TYPE', path: '/pages/setting/user-type' },
+            { title: 'ACCESS', path: '/pages/setting/access' },
+            { title: 'CLASS', path: '/pages/setting/class' }
         ]
     };
 

@@ -1,0 +1,39 @@
+<div class="p-3 font-weight-bold">
+
+    <div class="row">
+        <div class="buttons">
+            <h2>View Customer</h2>
+        </div>
+    </div>
+
+</div>
+
+<mat-divider></mat-divider>
+
+<div class="lists">
+
+    <div class="card mt-4">
+        <div class=" card-header">
+            Customer
+        </div>
+
+        <div class="container">
+
+            <div class="row mt-4">
+
+                <div class="col-md-12">
+                    <p><b>User Code:</b> {{details?.idCode}}</p>
+                    <p><b>First Name: </b>{{details?.firstName}}</p>
+                    <p><b>Middle Name: </b>{{details?.middleName}}</p>
+                    <p><b>Last Name: </b>{{details?.lastName}}</p>
+                    <p><b>Address:</b> {{details?.address}}</p>
+                    <p><b>Contact Number:</b> {{details?.contactNo}}</p>
+                    <p><b>User Type:</b> {{details?.userType}}</p>
+                    <p><b>Email:</b> {{details?.email}}</p>
+                </div>
+            </div>
+            <button (click)="goBack()" class="btn btn-primary mb-4">Back</button>
+
+        </div>
+    </div>
+</div>

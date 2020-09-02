@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EACpC,AAAA,YAAY,CAAA;IACR,KAAK,EAAE,KAAK;GACf",
+    "sources": [
+        "payable-add.component.scss"
+    ],
+    "names": [],
+    "file": "payable-add.component.css"
+}
