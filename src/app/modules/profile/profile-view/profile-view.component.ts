@@ -17,7 +17,6 @@ export class ProfileViewComponent implements OnInit {
   getProfile() {
     this.apiService.getRequest('/profile').subscribe((res: any) => {
       this.profileData = res;
-
       console.log('HTTP response ', res);
     }, err => console.log('HTTP Error ', err));
   }

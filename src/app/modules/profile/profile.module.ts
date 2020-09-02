@@ -3,10 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { ProfileRoutingModule } from './profile-routing.module';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { ProfileEditComponent } from './profile-edit/profile-edit.component';
 
 
 @NgModule({
-  declarations: [ProfileViewComponent],
+  declarations: [ProfileViewComponent, ProfileEditComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule
