@@ -6,6 +6,13 @@
       "author": "typicode"
     }
   ],
+  "user/login": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
   "profileData": [
     {
       "name": "Ryan Arqueza",
