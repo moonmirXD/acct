@@ -16,12 +16,12 @@ export class AccountActivateComponent implements OnInit {
 
   getAccount() {
     this.apiService.getRequest('/account').subscribe(res => {
-      this.accountData = res;
+      this.accounts = res;
     });
   }
   getAccountYear() {
     this.apiService.getRequest('/accoun/choose/').subscribe(res => {
-      this.accountData = res;
+      this.accounts = res;
     });
   }
 
