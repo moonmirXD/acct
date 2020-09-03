@@ -7,7 +7,7 @@ import { ApiService } from 'src/app/core/http/api.service';
   styleUrls: ['./account-activate.component.scss']
 })
 export class AccountActivateComponent implements OnInit {
-  accountData: any;
+  accounts: any;
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {

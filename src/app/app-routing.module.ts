@@ -22,11 +22,11 @@ const routes: Routes = [
     loadChildren: () => import('./modules/pages.module').then((m) => m.PagesModule),
   },
   {
-    path: '',
+    path: 'account',
     loadChildren: () => import('./modules/accounts/accounts.module').then((m) => m.AccountsModule),
   },
   {
-    path: 'login',
+    path: '',
     loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
   },
   { path: '**', redirectTo: '', pathMatch: 'full' }
