@@ -6,21 +6,19 @@
       "author": "typicode"
     }
   ],
+  "profileData": [
+    {
+      "name": "Ryan Arqueza",
+      "email": "json-server"
+    }
+  ],
   "account": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Ryan Arqueza",
+      "email": "json-server"
     }
   ],
-  "user/login": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "profileData": [
+  "login": [
     {
       "name": "Ryan Arqueza",
       "email": "json-server"
