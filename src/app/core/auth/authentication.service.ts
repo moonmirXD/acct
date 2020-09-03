@@ -11,7 +11,7 @@ export class AuthenticationService {
   constructor(private http: HttpClient, private router: Router) { }
 
   loginUser(user) {
-    return this.http.post<any>(this.API_URL + '/login', user);
+    return this.http.post<any>(this.API_URL + '/user/login', user);
   }
   loggedinUser() {
     return !!localStorage.getItem('token');
