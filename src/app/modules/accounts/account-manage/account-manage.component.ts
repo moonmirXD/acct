@@ -4,7 +4,7 @@ import { ApiService } from 'src/app/core/http/api.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AccountCreateComponent } from '../account-create/account-create.component';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-account-manage',
   templateUrl: './account-manage.component.html',
@@ -13,7 +13,7 @@ import { AccountCreateComponent } from '../account-create/account-create.compone
 export class AccountManageComponent implements OnInit {
 
   systemName: any = environment.systemName;
-  constructor(private apiService: ApiService, private dialog: MatDialog, private router: Router
+  constructor(private apiService: ApiService, private dialog: MatDialog, private router: Router, private location: Location
   ) { }
 
   ngOnInit(): void {
@@ -32,5 +32,7 @@ export class AccountManageComponent implements OnInit {
   onManageAccount() {
     this.router.navigate(['account/manage']);
   }
-
+  onBack() {
+    this.location.back();
+  }
 }
