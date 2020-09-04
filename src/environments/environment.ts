@@ -6,6 +6,7 @@ export const environment = {
   production: false,
   version: 'v1.0.0',
   name: 'DEV ENV',
+  systemName: 'Project 01',
   API_URL: 'http://localhost:3000'
 };
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/core/http/api.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-account-activate',
@@ -8,6 +9,7 @@ import { ApiService } from 'src/app/core/http/api.service';
 })
 export class AccountActivateComponent implements OnInit {
   accounts: any;
+  systemName: any = environment.systemName;
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
