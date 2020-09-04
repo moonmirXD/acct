@@ -42,7 +42,7 @@ export class AccountActivateComponent implements OnInit {
     });
   }
   onManageAccount() {
-    this.router.navigate(['manage']);
+    this.router.navigate(['account/manage']);
   }
 
 }
