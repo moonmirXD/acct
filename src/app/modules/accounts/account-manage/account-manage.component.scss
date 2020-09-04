@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    background-color: bisque;
+}
+.container { 
+    height: 100vh;
+    position: relative;
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding:50px;
+    width: 60%;
+  }
+  .buttons-box{
+      margin-bottom: 15px;
+      display: flex;
+      justify-content: space-between;
+  }
+  .manage{
+      margin-left: 60px;
+  }
+  .ma, .ca{
+    display: inline-block;
+    height: 50px;
+    width: 200px;
+    padding: 5px;
+
+
+  }
+  .border{
+      padding: 15px;
+      opacity: .8;
+  }
+  img{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
