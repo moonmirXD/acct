@@ -41,5 +41,8 @@ export class AccountActivateComponent implements OnInit {
     dialogRef.afterClosed().subscribe(res => {
     });
   }
+  onManageAccount() {
+    this.router.navigate(['manage']);
+  }
 
 }
