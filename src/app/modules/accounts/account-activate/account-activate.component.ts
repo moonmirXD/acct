@@ -45,4 +45,8 @@ export class AccountActivateComponent implements OnInit {
     this.router.navigate(['account/manage']);
   }
 
+  onActivate() {
+    this.router.navigate(['pages/profile']);
+  }
+
 }

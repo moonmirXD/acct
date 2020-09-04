@@ -30,7 +30,7 @@
                     <option *ngFor="let account of accounts">{{ account.id }}</option>
                 </select>
             </div>
-            <button type="button" class="btn btn-outline-info activate">Activate</button>
+            <button type="button" class="btn btn-outline-info activate" (click)="onActivate()">Activate</button>
 
         </div>
     </div>
