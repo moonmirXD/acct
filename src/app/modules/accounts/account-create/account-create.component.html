@@ -1,1 +1,26 @@
-<p>account-create works!</p>
+<p>Add New Account</p>
+<mat-divider></mat-divider>
+<form [formGroup]="accountForm" (ngSubmit)="onSubmit(accountForm.value)" mat-dialog-content>
+
+    <div class="form-group">
+        <label>Year *</label>
+        <input type="text" class="form-control" formControlName="year"
+            [ngClass]="{ 'is-invalid': submitted && f.year?.errors }">
+        <div *ngIf="submitted && f.year?.errors" class="invalid-feedback">
+            <div *ngIf="f.year?.errors.required">Year is required</div>
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label>Name *</label>
+        <input type="text" class="form-control" formControlName="name"
+            [ngClass]="{ 'is-invalid': submitted && f.name?.errors }">
+        <div *ngIf="submitted && f.name?.errors" class="invalid-feedback">
+            <div *ngIf="f.name?.errors.required">Name is required</div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mr-2">Add</button>
+    <button type="button" class="btn btn-primary" (click)="onClose()">Cancel</button>
+</form>
