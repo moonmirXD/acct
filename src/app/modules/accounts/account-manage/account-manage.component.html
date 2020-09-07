@@ -47,10 +47,10 @@
                             <td>{{ account.year }}</td>
                             <td>{{ account.name }}</td>
                             <td>
-                                <button mat-icon-button (click)="onEdit(element)">
+                                <button mat-icon-button (click)="onEdit(account)">
                                     <mat-icon>launch</mat-icon>
                                 </button>
-                                <button class="ml-2" mat-icon-button color="warn" (click)="onDelete(element.id)">
+                                <button class="ml-2" mat-icon-button color="warn" (click)="onDelete(account.id)">
                                     <mat-icon>delete_outline</mat-icon>
                                 </button></td>
                         </tr>
