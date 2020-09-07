@@ -19,6 +19,6 @@ import { AccountEditComponent } from './account-edit/account-edit.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  entryComponents: [AccountCreateComponent]
+  entryComponents: [AccountCreateComponent, AccountEditComponent]
 })
 export class AccountsModule { }
