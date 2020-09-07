@@ -41,19 +41,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let account of accounts">
+                        <tr
+                            *ngFor="let account of accounts | paginate: { itemsPerPage: 3, currentPage: p }; let i = index">
                             <th scope="row">{{ account.id }}</th>
                             <td>{{ account.year }}</td>
                             <td>{{ account.name }}</td>
                             <td>
-                                <button mat-icon-button (click)="onEdit(element)">
+                                <!-- <button mat-icon-button (click)="onEdit(element)">
                                     <mat-icon>launch</mat-icon>
-                                </button>
+                                </button> -->
                                 <button class="ml-2" mat-icon-button color="warn" (click)="onDelete(element.id)">
                                     <mat-icon>delete_outline</mat-icon>
                                 </button></td>
                         </tr>
                     </tbody>
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
                 </table>
             </div>
 

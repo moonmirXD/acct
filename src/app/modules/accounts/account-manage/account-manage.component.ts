@@ -12,6 +12,7 @@ import { SubscriptionLike } from 'rxjs';
   styleUrls: ['./account-manage.component.scss']
 })
 export class AccountManageComponent implements OnInit, OnDestroy {
+  public p: any = 1;
   subscription: SubscriptionLike;
   accounts: any;
   systemName: any = environment.systemName;
