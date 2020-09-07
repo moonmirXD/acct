@@ -21,50 +21,6 @@
   ],
   "login": [
     {
-      "name": "Ryan Arqueza",
-      "email": "json-server"
-    }
-  ],
-  "usertype": [
-    {
-      "name": "qweqwe",
-      "code": "aa",
-      "id": 1
-    },
-    {
-      "name": "hehe",
-      "code": "hehe",
-      "id": 2
-    }
-  ],
-  "user": [
-    {
-      "idNo": "q",
-      "firstName": "ewqwq",
-      "middleName": "weqwe",
-      "lastName": "qweqweqwe",
-      "address": "qwe",
-      "contactNo": "qwewqe",
-      "userType": "Admin",
-      "email": "asas",
-      "password": "saasasas",
-      "id": 2
-    },
-    {
-      "idNo": "wa",
-      "firstName": "wa",
-      "middleName": "wa",
-      "lastName": "wa",
-      "address": "wa",
-      "contactNo": "wawa",
-      "userType": "Accountant 1",
-      "email": "aa",
-      "password": "a",
-      "id": 3
-    }
-  ],
-  "login": [
-    {
       "id": 1,
       "title": "json-server",
       "author": "typicode"
@@ -183,6 +139,44 @@
       "username": "asdasdsad",
       "password": "dsd",
       "id": 24
+    }
+  ],
+  "usertype": [
+    {
+      "name": "qweqwe",
+      "code": "aa",
+      "id": 1
+    },
+    {
+      "name": "hehe",
+      "code": "hehe",
+      "id": 2
+    }
+  ],
+  "user": [
+    {
+      "idNo": "q",
+      "firstName": "ewqwq",
+      "middleName": "weqwe",
+      "lastName": "qweqweqwe",
+      "address": "qwe",
+      "contactNo": "qwewqe",
+      "userType": "Admin",
+      "email": "asas",
+      "password": "saasasas",
+      "id": 2
+    },
+    {
+      "idNo": "wa",
+      "firstName": "wa",
+      "middleName": "wa",
+      "lastName": "wa",
+      "address": "wa",
+      "contactNo": "wawa",
+      "userType": "Accountant 1",
+      "email": "aa",
+      "password": "a",
+      "id": 3
     }
   ],
   "projects": [
@@ -1116,6 +1110,11 @@
       "description": "",
       "isCashAccount": "false",
       "id": 52
+    },
+    {
+      "year": "asdasd",
+      "name": "sadsdsa",
+      "id": 53
     }
   ],
   "comments": [

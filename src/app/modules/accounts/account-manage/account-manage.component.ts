@@ -11,7 +11,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./account-manage.component.scss']
 })
 export class AccountManageComponent implements OnInit {
-
+  accounts: any;
   systemName: any = environment.systemName;
   constructor(private apiService: ApiService, private dialog: MatDialog, private router: Router, private location: Location
   ) { }
@@ -37,11 +37,16 @@ export class AccountManageComponent implements OnInit {
   }
   onDelete(row) {
     if (confirm('Are you sure you want to delete this?')) {
-      this.apiService.deleteRequest('/sales', row).subscribe(res => {
+      this.apiService.deleteRequest('/sample', row).subscribe(res => {
         console.log('Deleted');
       });
     } else {
       console.log('Thing was not saved to the database.');
     }
+  }
+  getAccounts() {
+    this.apiService.getRequest('/sample').subscribe(res => {
+      this.accounts = res;
+    });
   }
 }

@@ -37,7 +37,7 @@ export class AccountCreateComponent implements OnInit {
       return;
     }
 
-    this.apiService.postRequest('/user/register/superadmin', form).subscribe(res => {
+    this.apiService.postRequest('/sample', form).subscribe(res => {
       console.log(res);
       alert('Successfully added');
       this.onClose();
