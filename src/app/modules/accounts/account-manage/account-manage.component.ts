@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AccountCreateComponent } from '../account-create/account-create.component';
 import { Location } from '@angular/common';
 import { SubscriptionLike } from 'rxjs';
+import { AccountEditComponent } from '../account-edit/account-edit.component';
 @Component({
   selector: 'app-account-manage',
   templateUrl: './account-manage.component.html',
@@ -49,6 +50,22 @@ export class AccountManageComponent implements OnInit, OnDestroy {
       console.log('Thing was not saved to the database.');
     }
   }
+
+  onEdit(row) {
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '60%';
+    const dialogRef = this.dialog.open(AccountEditComponent,
+      {
+        data: { row }
+      });
+
+    dialogRef.afterClosed().subscribe(res => {
+      this.getAccounts();
+    });
+  }
+
   getAccounts() {
     this.subscription = this.apiService.getRequest('/sample').subscribe(res => {
       this.accounts = res;
