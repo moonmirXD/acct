@@ -1,22 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ApiService } from 'src/app/core/http/api.service';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AccountCreateComponent } from '../account-create/account-create.component';
 import { Location } from '@angular/common';
+import { SubscriptionLike } from 'rxjs';
 @Component({
   selector: 'app-account-manage',
   templateUrl: './account-manage.component.html',
   styleUrls: ['./account-manage.component.scss']
 })
-export class AccountManageComponent implements OnInit {
+export class AccountManageComponent implements OnInit, OnDestroy {
+  subscription: SubscriptionLike;
   accounts: any;
   systemName: any = environment.systemName;
   constructor(private apiService: ApiService, private dialog: MatDialog, private router: Router, private location: Location
   ) { }
 
   ngOnInit(): void {
+    this.getAccounts();
   }
 
   onAdd() {
@@ -45,8 +48,13 @@ export class AccountManageComponent implements OnInit {
     }
   }
   getAccounts() {
-    this.apiService.getRequest('/sample').subscribe(res => {
+    this.subscription = this.apiService.getRequest('/sample').subscribe(res => {
       this.accounts = res;
     });
+  }
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 }
