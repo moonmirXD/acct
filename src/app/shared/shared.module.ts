@@ -6,14 +6,15 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { MaterialModule } from './material/material.module';
 import { TableComponent } from './components/table/table.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
   declarations: [FooterComponent, HeaderComponent, SidebarComponent, TableComponent, PagenotfoundComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    NgxPaginationModule
   ],
   exports: [
     FooterComponent,
@@ -21,7 +22,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     SidebarComponent,
     TableComponent,
 
-    MaterialModule
+    MaterialModule,
+    NgxPaginationModule
   ]
 })
 export class SharedModule { }
