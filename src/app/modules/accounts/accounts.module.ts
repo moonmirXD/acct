@@ -7,10 +7,11 @@ import { AccountCreateComponent } from './account-create/account-create.componen
 import { AccountManageComponent } from './account-manage/account-manage.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AccountEditComponent } from './account-edit/account-edit.component';
 
 
 @NgModule({
-  declarations: [AccountActivateComponent, AccountCreateComponent, AccountManageComponent],
+  declarations: [AccountActivateComponent, AccountCreateComponent, AccountManageComponent, AccountEditComponent],
   imports: [
     CommonModule,
     AccountsRoutingModule,
