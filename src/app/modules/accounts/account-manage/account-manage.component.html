@@ -41,10 +41,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                        <tr *ngFor="let account of accounts">
                             <th scope="row">{{ accounts.id }}</th>
-                            <td>{{ accounts.year }}</td>
-                            <td>{{ accounts.name }}</td>
+                            <td>{{ account.year }}</td>
+                            <td>{{ account.name }}</td>
                             <td>
                                 <button mat-icon-button (click)="onEdit(element)">
                                     <mat-icon>launch</mat-icon>
