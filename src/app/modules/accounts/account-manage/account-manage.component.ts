@@ -35,4 +35,13 @@ export class AccountManageComponent implements OnInit {
   onBack() {
     this.location.back();
   }
+  onDelete(row) {
+    if (confirm('Are you sure you want to delete this?')) {
+      this.apiService.deleteRequest('/sales', row).subscribe(res => {
+        console.log('Deleted');
+      });
+    } else {
+      console.log('Thing was not saved to the database.');
+    }
+  }
 }
