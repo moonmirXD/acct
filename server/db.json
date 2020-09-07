@@ -575,19 +575,20 @@
   ],
   "sample": [
     {
-      "year": "asdasd",
-      "name": "sadsdsa",
-      "id": 53
-    },
-    {
-      "year": "hehe",
-      "name": "heheh",
-      "id": 54
+      "year": "1997",
+      "name": "Ryan Arqueza",
+      "id": 53,
+      "isClosed": null
     },
     {
       "year": "1997",
       "name": "ryan",
       "id": 55
+    },
+    {
+      "year": "1997",
+      "name": "Mads",
+      "id": 56
     }
   ],
   "comments": [
