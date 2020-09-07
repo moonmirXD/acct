@@ -31,6 +31,7 @@ export class AccountManageComponent implements OnInit, OnDestroy {
     const dialogRef = this.dialog.open(AccountCreateComponent);
 
     dialogRef.afterClosed().subscribe(res => {
+      this.getAccounts();
     });
   }
   onManageAccount() {
