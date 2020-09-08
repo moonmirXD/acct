@@ -7,7 +7,8 @@ export const environment = {
   version: 'v1.0.0',
   name: 'DEV ENV',
   systemName: 'Project 022',
-  API_URL: 'http://localhost:3000'
+  // API_URL: 'http://localhost:3000'
+  API_URL: 'https://accounting-test-app.herokuapp.com'
 };
 
 /*
