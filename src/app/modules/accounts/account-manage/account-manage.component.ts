@@ -68,8 +68,9 @@ export class AccountManageComponent implements OnInit, OnDestroy {
   }
 
   getAccounts() {
-    this.subscription = this.apiService.getRequest('/sample').subscribe(res => {
-      this.accounts = res;
+    this.subscription = this.apiService.getRequest('/account').subscribe((res: any) => {
+      this.accounts = res.data;
+      console.log(res);
     });
   }
   ngOnDestroy() {
