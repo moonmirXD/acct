@@ -31,8 +31,9 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
   }
 
   getAccounts() {
-    this.subscription = this.apiService.getRequest('/account').subscribe(res => {
-      this.accounts = res;
+    this.subscription = this.apiService.getRequest('/account').subscribe((res: any) => {
+      this.accounts = res.data;
+      console.log(res);
     });
   }
   getAccountYear() {

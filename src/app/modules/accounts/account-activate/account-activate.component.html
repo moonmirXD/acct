@@ -27,7 +27,7 @@
             <div class="border">
                 <p>Accounts:</p>
                 <select class="form-control form-control-lg">
-                    <option *ngFor="let account of accounts">{{ account.id }}</option>
+                    <option *ngFor="let account of accounts">{{ account.year }}</option>
                 </select>
             </div>
             <button type="button" class="btn btn-outline-info activate" (click)="onActivate()">Activate</button>
