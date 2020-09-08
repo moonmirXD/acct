@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { AccountCreateComponent } from '../account-create/account-create.component';
 import { AuthenticationService } from 'src/app/core/auth/authentication.service';
 import { SubscriptionLike } from 'rxjs';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-account-activate',
@@ -16,11 +17,16 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
   subscription: SubscriptionLike;
   accounts: any;
   systemName: any = environment.systemName;
-  constructor(private apiService: ApiService, private dialog: MatDialog, private router: Router,
-    private authenticationService: AuthenticationService
+  constructor(
+    private apiService: ApiService,
+    private dialog: MatDialog,
+    private router: Router,
+    private authenticationService: AuthenticationService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
+    this.spinner.show();
     this.getAccounts();
   }
 
@@ -34,6 +40,8 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
     this.subscription = this.apiService.getRequest('/account').subscribe((res: any) => {
       this.accounts = res.data;
       console.log(res);
+
+      this.spinner.hide();
     });
   }
   getAccountYear() {

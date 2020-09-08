@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -7,14 +7,15 @@ import { MaterialModule } from './material/material.module';
 import { TableComponent } from './components/table/table.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [FooterComponent, HeaderComponent, SidebarComponent, TableComponent, PagenotfoundComponent],
   imports: [
     CommonModule,
     MaterialModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgxSpinnerModule
   ],
   exports: [
     FooterComponent,
@@ -23,7 +24,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     TableComponent,
 
     MaterialModule,
-    NgxPaginationModule
-  ]
+    NgxPaginationModule,
+    NgxSpinnerModule
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SharedModule { }
