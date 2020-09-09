@@ -1,4 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 div.container{
@@ -6,8 +5,6 @@ div.container{
 }
 
 .fill-remaining-space {
-    /* This fills the remaining space, by using flexbox. 
-       Every toolbar row uses a flexbox row layout. */
     flex: 1 1 auto;
   }
 
@@ -27,7 +24,6 @@ div.container{
     .add-bottom-padding{
         padding-bottom: 10px;
     }
-    /* radio group */
 mat-radio-group mat-radio-button{
     margin-left: 5px;
 }
@@ -36,7 +32,6 @@ mat-radio-group mat-radio-button{
     margin: 5px;
 }
 
-/* notification */
 snack-bar-container.success {
     background-color: #5cb85c;
     color : #fff;
@@ -58,13 +53,11 @@ snack-bar-container.success {
     display: none;
 }
 
-/* mat-table */
 mat-footer-row mat-footer-cell{
     justify-content: center;
     font-style: italic;
 }
 
-/* filter controls */
 .search-div{
     margin: 10px;
       }
@@ -89,7 +82,6 @@ mat-footer-row mat-footer-cell{
             width: 32px;
         }
 
-        /* for dialog pop-up */
   .btn-dialog-close{
     width: 45px;
     min-width: 0px !important;

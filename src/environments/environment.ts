@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
+  production: true,
   version: 'v1.0.0',
   name: 'DEV ENV',
   systemName: 'Accounting Project 022',
