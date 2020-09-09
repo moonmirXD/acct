@@ -31,18 +31,24 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    // if (this.subscription) {
+    //   this.subscription.unsubscribe();
+    // }
   }
 
   getAccounts() {
-    this.subscription = this.apiService.getRequest('/account').subscribe((res: any) => {
+    this.apiService.getRequest('/account').subscribe((res: any) => {
       this.accounts = res.data;
       console.log(res);
 
       this.spinner.hide();
     });
+    // this.subscription = this.apiService.getRequest('/account').subscribe((res: any) => {
+    //   this.accounts = res.data;
+    //   console.log(res);
+
+    //   this.spinner.hide();
+    // });
   }
   getAccountYear() {
     this.apiService.getRequest('/account/choose/').subscribe(res => {

@@ -1,13 +1,13 @@
 import { Injectable, Injector } from '@angular/core';
 import { AuthenticationService } from './authentication.service';
 import { catchError } from 'rxjs/operators';
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpErrorResponse, HttpInterceptor } from '@angular/common/http';
 import { throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class TokenInterceptorService {
+export class TokenInterceptorService implements HttpInterceptor {
 
   constructor(
     private injector: Injector,
@@ -18,7 +18,7 @@ export class TokenInterceptorService {
     const authenticationService = this.injector.get(AuthenticationService);
     const tokenizedReq = req.clone({
       setHeaders: {
-        Authorization: `${authenticationService.getToken()}`
+        Authorization: `Bearer ${authenticationService.getToken()}`
       }
     });
     return next.handle(tokenizedReq).pipe(
