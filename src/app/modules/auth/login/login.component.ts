@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { AuthenticationService } from 'src/app/core/auth/authentication.service';
 import { Router } from '@angular/router';
