@@ -5,7 +5,7 @@
 
         <div class="form-group">
             <label>Year *</label>
-            <input type="text" class="form-control" formControlName="year"
+            <input type="text" class="form-control" formControlName="year" type="number"
                 [ngClass]="{ 'is-invalid': submitted && f.year?.errors }">
             <div *ngIf="submitted && f.year?.errors" class="invalid-feedback">
                 <div *ngIf="f.year?.errors.required">Year is required</div>
