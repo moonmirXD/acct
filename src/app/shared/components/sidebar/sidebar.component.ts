@@ -4,6 +4,7 @@ import { MatCardLgImage } from '@angular/material/card';
 import { map } from 'rxjs/operators';
 import { MenuConfig } from 'src/app/config/menu.config';
 import { ApiService } from 'src/app/core/http/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -14,16 +15,22 @@ export class SidebarComponent implements OnInit {
   config = this.menuConfig.defaults;
   panelOpenState = false;
   userData: any;
+  year: any;
 
-  constructor(private menuConfig: MenuConfig, private apiService: ApiService) { }
+  constructor(private menuConfig: MenuConfig, private apiService: ApiService, private router: Router) { }
 
   ngOnInit(): void {
+    console.log(this.router.url);
+
     this.apiService.getRequest('/user/profile').subscribe(res => {
       console.log('Successfully fetch');
       this.userData = res;
+
     }, err => {
       console.log(err);
     });
+
+
   }
 
 }
