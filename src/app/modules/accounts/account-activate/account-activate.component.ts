@@ -78,16 +78,12 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(form) {
-    console.log("Form:" + this.activateForm.value.year);
     const year = this.activateForm.value.year;
-    // const yearToNumber = +year;
-    // console.log(form.value);
-    // console.log(yearToNumber);
     this.apiService.getRequest(`/account/choose/${year}`).subscribe((res: any) => {
       console.log(res);
     });
 
-    // this.router.navigate([`pages/profile/${this.activateForm.value}`]);
+    this.router.navigate([`pages/profile/${year}`]);
   }
 
 }
