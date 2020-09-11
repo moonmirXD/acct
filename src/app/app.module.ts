@@ -9,6 +9,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthGuard } from './core/auth/guard/auth.guard';
 import { TokenInterceptorService } from './core/auth/token-interceptor.service';
 import { NoAuthGuard } from './core/auth/guard/no-auth.guard';
+import { AuthenticationService } from './core/auth/authentication.service';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NoAuthGuard } from './core/auth/guard/no-auth.guard';
     HttpClientModule,
   ],
   providers: [
+    AuthenticationService,
     AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,

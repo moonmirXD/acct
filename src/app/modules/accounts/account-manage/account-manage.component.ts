@@ -43,7 +43,7 @@ export class AccountManageComponent implements OnInit, OnDestroy {
   }
   onDelete(row) {
     if (confirm('Are you sure you want to delete this?')) {
-      this.apiService.deleteRequest('/sample', row).subscribe(res => {
+      this.apiService.deleteRequest('/account', row).subscribe(res => {
         console.log('Deleted');
         this.getAccounts();
       });

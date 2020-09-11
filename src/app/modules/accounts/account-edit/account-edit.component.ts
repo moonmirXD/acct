@@ -43,7 +43,7 @@ export class AccountEditComponent implements OnInit {
     }
 
     const id = this.data.row.id;
-    this.apiService.updateRequest('/sample', id, form).subscribe(res => {
+    this.apiService.updateRequest('/account', id, form).subscribe(res => {
       console.log('HTTP response ', res);
       alert('Successfully Updated');
       this.onClose();

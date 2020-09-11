@@ -32,12 +32,12 @@ export class AccountCreateComponent implements OnInit {
 
   onSubmit(form) {
     this.submitted = true;
-
+    console.log(form);
     if (this.accountForm.invalid) {
       return;
     }
 
-    this.apiService.postRequest('/user/register/superadmin', form).subscribe((res: any) => {
+    this.apiService.postRequest('/account', form).subscribe((res: any) => {
       console.log(res);
       alert('Successfully added');
       this.onClose();
