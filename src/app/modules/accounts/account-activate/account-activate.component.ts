@@ -21,11 +21,11 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
   systemName: any = environment.systemName;
   constructor(
     private apiService: ApiService,
+    private authenticationService: AuthenticationService,
     private fb: FormBuilder,
     private dialog: MatDialog,
     private router: Router,
-    private authenticationService: AuthenticationService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
   ) {
     this.activateForm = this.fb.group({
       year: [Validators.required],
@@ -81,6 +81,7 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
     const year = this.activateForm.value.year;
     this.apiService.getRequest(`/account/choose/${year}`).subscribe((res: any) => {
       console.log(res);
+      localStorage.setItem('token', res.data.token);
     });
 
     this.router.navigate([`pages/profile/${year}`]);
