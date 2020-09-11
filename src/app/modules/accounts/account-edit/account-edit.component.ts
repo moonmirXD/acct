@@ -25,7 +25,7 @@ export class AccountEditComponent implements OnInit {
     this.accountForm = this.fb.group({
       name: [this.data.row.name, Validators.required],
       year: [this.data.row.year, Validators.required],
-      isClosed: [this.data.row.isClosed, Validators.required],
+      // isClosed: [this.data.row.isClosed, Validators.required],
     });
   }
 

@@ -7,6 +7,7 @@ import { AccountCreateComponent } from '../account-create/account-create.compone
 import { AuthenticationService } from 'src/app/core/auth/authentication.service';
 import { SubscriptionLike } from 'rxjs';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-account-activate',
@@ -15,15 +16,21 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class AccountActivateComponent implements OnInit, OnDestroy {
   subscription: SubscriptionLike;
+  activateForm: FormGroup;
   accounts: any;
   systemName: any = environment.systemName;
   constructor(
     private apiService: ApiService,
+    private fb: FormBuilder,
     private dialog: MatDialog,
     private router: Router,
     private authenticationService: AuthenticationService,
     private spinner: NgxSpinnerService
-  ) { }
+  ) {
+    this.activateForm = this.fb.group({
+      year: ['', Validators.required],
+    });
+  }
 
   ngOnInit(): void {
     this.spinner.show();
@@ -70,8 +77,17 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
     this.router.navigate(['account/manage']);
   }
 
-  onActivate() {
-    this.router.navigate(['pages/profile']);
+  onSubmit(form) {
+    console.log("Form:" + this.activateForm.value.year);
+    const year = this.activateForm.value.year;
+    // const yearToNumber = +year;
+    // console.log(form.value);
+    // console.log(yearToNumber);
+    this.apiService.getRequest(`/account/choose/${year}`).subscribe((res: any) => {
+      console.log(res);
+    });
+
+    // this.router.navigate([`pages/profile/${this.activateForm.value}`]);
   }
 
 }

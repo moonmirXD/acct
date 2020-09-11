@@ -24,14 +24,15 @@
                 <button type="button" class="btn btn-outline-info manage ma" (click)="onManageAccount()">Manage
                     Account</button>
             </div>
-            <div class="border">
-                <p>Accounts:</p>
-                <select class="form-control form-control-lg">
-                    <option *ngFor="let account of accounts">{{ account.year }}</option>
-                </select>
-            </div>
-            <button type="button" class="btn btn-outline-info activate a" (click)="onActivate()">Activate</button>
-
+            <form action="" [formGroup]="activateForm" (ngSubmit)="onSubmit(activateForm.value)">
+                <div class="border">
+                    <p>Accounts:</p>
+                    <select class="form-control form-control-lg" formControlName="year">
+                        <option *ngFor="let account of accounts" value="{{account.year}}">{{ account.year }}</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-outline-info activate">Activate</button>
+            </form>
         </div>
     </div>
 </body>

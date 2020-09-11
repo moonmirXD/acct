@@ -5,7 +5,7 @@ import { ProfileViewComponent } from './profile-view/profile-view.component';
 
 
 const routes: Routes = [
-  { path: '', component: ProfileViewComponent },
+  { path: ':year', component: ProfileViewComponent },
   // { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
