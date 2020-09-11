@@ -28,7 +28,7 @@ export class AccountActivateComponent implements OnInit, OnDestroy {
     private spinner: NgxSpinnerService
   ) {
     this.activateForm = this.fb.group({
-      year: ['', Validators.required],
+      year: [Validators.required],
     });
   }
 

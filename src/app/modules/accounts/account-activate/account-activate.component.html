@@ -27,8 +27,11 @@
             <form action="" [formGroup]="activateForm" (ngSubmit)="onSubmit(activateForm.value)">
                 <div class="border">
                     <p>Accounts:</p>
-                    <select class="form-control form-control-lg" formControlName="year">
-                        <option *ngFor="let account of accounts" value="{{account.year}}">{{ account.year }}</option>
+                    <select class="form-control form-control-lg" formControlName="year"
+                        (change)="ChangingValue($event)">
+                        <option *ngFor="let account of accounts" value="{{account.year}}" [selected]="account.year">
+                            {{ account.year }}
+                        </option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-outline-info activate">Activate</button>
