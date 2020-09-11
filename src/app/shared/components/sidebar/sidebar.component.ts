@@ -18,7 +18,7 @@ export class SidebarComponent implements OnInit {
   constructor(private menuConfig: MenuConfig, private apiService: ApiService) { }
 
   ngOnInit(): void {
-    this.apiService.getRequest('/profileData').subscribe(res => {
+    this.apiService.getRequest('/user/profile').subscribe(res => {
       console.log('Successfully fetch');
       this.userData = res;
     }, err => {
