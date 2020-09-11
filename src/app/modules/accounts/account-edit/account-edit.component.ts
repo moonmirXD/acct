@@ -24,8 +24,8 @@ export class AccountEditComponent implements OnInit {
 
     this.accountForm = this.fb.group({
       name: [this.data.row.name, Validators.required],
-      year: [this.data.row.year],
-      isClosed: [this.data.row.isClosed],
+      year: [this.data.row.year, Validators.required],
+      isClosed: [this.data.row.isClosed, Validators.required],
     });
   }
 
@@ -42,7 +42,7 @@ export class AccountEditComponent implements OnInit {
       return;
     }
 
-    const id = this.data.row.id;
+    const id = this.data.row._id;
     this.apiService.updateRequest('/account', id, form).subscribe(res => {
       console.log('HTTP response ', res);
       alert('Successfully Updated');
